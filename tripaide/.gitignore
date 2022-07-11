@@ -1,3 +1,7 @@
+master.key
+public/assets/*
+
 node_modules/
 bundle.js
 bundle.js.map
+bundle.js*
