@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.login = login;
     window.signup = signup;
     window.logout = logout;
-
+console.log("its working")
     let store;
     if (window.currentUser) {
         const preloadedState = {
