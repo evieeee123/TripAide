@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ProfileDropdown from './profile_dropdown';
 
 
 // const Greeting = ({ currentUser, logout }) => {
@@ -38,9 +39,9 @@ class Greeting extends React.Component{
                         <ProfileDropdown handleLogout={this.handleLogout} />
                 </div>
         ) : (
-                <div>
-                    <Link to='/signup' className='signup-button' >Sign Up</Link>
-                    <Link to='/login' className='login-button' >Login</Link>
+                <div className='nav-session-button'>
+                    <span><Link to='/signup' className='nav-session-button-single' >Sign Up</Link></span>
+                    <span><Link to='/login' className='nav-session-button-single' >Login</Link></span>
                 </div>
            )
         return navBar
