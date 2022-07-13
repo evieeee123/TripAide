@@ -6,8 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-require "city"
 
+Spot.destroy_all
 City.destroy_all
 
 # city 1
@@ -48,4 +48,71 @@ seattle = City.create!({
     do_description: "Places to see, ways to wander, and signature experiences.",
     stay_description: "A mix of the charming, modern, and tried and true.",
     eat_description: "Can't-miss spots to dine, drink, and feast."
+})
+
+
+# attraction 1
+ferry_building = Spot.create!({
+    city_id: san_francisco.id,
+    name: 'Ferry Building Marketplace',
+    spot_type: "Points of Interest & Landmarks",
+    description: "A city landmark transformed into a gourmet food emporium and farmers market.",
+    duration: "1-2 hours",
+    longtitude: "-122.39278435986158",
+    latitude: "37.79501921083725"
+})
+
+# attraction 2
+chinatown = Spot.create!({
+    city_id: san_francisco.id,
+    name: 'Chinatown',
+    spot_type: "Neighborhoods",
+    description: "This electric neighborhood of 100,000 people is not to be missed, and it's not hard to find: listen for the clack of mahjong tiles and nose out the salty spicy squid.",
+    duration: "1-2 hours",
+    longtitude: "-122.4077477136368",
+    latitude: "37.79564131465383"
+})
+
+# attraction 3
+alcatraz_island = Spot.create!({
+    city_id: san_francisco.id,
+    name: 'Alcatraz Island',
+    spot_type: "Historic Sites",
+    description: "Park rangers conduct tours by recounting the prison's thrilling history along with intriguing anecdotes about Al Capone and other legendary figures that made a 'home' here.",
+    duration: "2-3 hours",
+    longtitude: "-122.42290185750613",
+    latitude: "37.8269859540991"
+})
+
+# attraction 4
+uss_museum = Spot.create!({
+    city_id: san_diego.id,
+    name: 'USS Midway Museum',
+    spot_type: "Speciality Museum",
+    description: "Located in downtown San Diego, the USS Midway (Museum) was America’s longest-serving aircraft carrier of the 20th century. Today, the interactive museum is an unforgettable adventure for the entire family as guests walk in the footsteps of the 225,000 young men who served on Midway. Visitors explore a floating city at sea, the amazing flight deck and its 29 restored aircraft, flight simulators, and are inspired in the Battle of Midway Theater, included with admission. Admission also includes a self-guided audio tour narrated by Midway sailors in English, Mandarin, Spanish, Japanese, French and German. Visiting Midway is a once-in-a-lifetime experience in San Diego, known around the world as 'Navy Town, USA.'",
+    duration: "More than 3 hours",
+    longtitude: "-117.17511693458052",
+    latitude: "32.7139406379275"
+})
+
+# attraction 5
+gliderport = Spot.create!({
+    city_id: san_diego.id,
+    name: 'Torrey Pines Gliderport',
+    spot_type: "Educational sites",
+    description: "With nearly 100 years of flying history, the Torrey Pines Gliderport is the most historic aviation site in North America, and Southern California’s premiere location for paragliding, hang gliding, remote control models and sailplanes. The Gliderport provides a world class flying site, flight lessons, certifications, tandem flights, equipment sales, and repair services.",
+    duration: "2-3 hours",
+    longtitude: "-117.25100788272174",
+    latitude: "32.889623732904376"
+})
+
+# attraction 6
+balboa_park = Spot.create!({
+    city_id: san_diego.id,
+    name: 'Balboa Park',
+    spot_type: "Parks",
+    description: "One of the most popular urban parks in the United States, this bucolic paradise is packed with an array of attractions, including the world-famous San Diego Zoo.",
+    duration: "More than 3 hours",
+    longtitude: "-117.14235663025597",
+    latitude: "32.73495166747875"
 })

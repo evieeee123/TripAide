@@ -1,0 +1,1 @@
+json.extract! @spot, :id, :city_id, :name, :spot_type, :description, :duration, :longtitude, :latitude
