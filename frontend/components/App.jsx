@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import LoginFormContainer from "./session_form/login_form_container";
 import SignupFormContainer from "./session_form/signup_form_container";
 import { AuthRoute } from "../util/route_util";
+import CityContainer from "./cities/city_container"
 
 const App = () => (
     <div>
@@ -18,6 +19,7 @@ const App = () => (
         <Switch>
             <AuthRoute path="/login" component={LoginFormContainer} />
             <AuthRoute path="/signup" component={SignupFormContainer} />
+            <Route path= "/cities/:cityId" component={CityContainer} />
         </Switch>
     </div>
 );

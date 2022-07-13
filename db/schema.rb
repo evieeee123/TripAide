@@ -10,10 +10,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_07_08_222627) do
+ActiveRecord::Schema.define(version: 2022_07_12_183459) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "cities", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "title", null: false
+    t.text "description", null: false
+    t.text "do_description", null: false
+    t.text "stay_description", null: false
+    t.text "eat_description", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_cities_on_name", unique: true
+  end
+
+  create_table "spots", force: :cascade do |t|
+    t.integer "city_id", null: false
+    t.string "name", null: false
+    t.string "type", null: false
+    t.text "description", null: false
+    t.string "duration", null: false
+    t.float "longtitude", null: false
+    t.float "latitude", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["city_id"], name: "index_spots_on_city_id", unique: true
+    t.index ["name"], name: "index_spots_on_name", unique: true
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "username", null: false
