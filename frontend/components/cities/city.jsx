@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 
 class City extends React.Component {
 
@@ -35,14 +35,17 @@ class City extends React.Component {
                     <div>
                         <h3>Do</h3>
                         <p>{city.do_description}</p>
+                        <p><Link to={`/spotslist/${city.id}`}>See all</Link></p>
                     </div>
                     <div>
                         <h3>Stay</h3>
                         <p>{city.stay_description}</p>
+                        <p><Link to={`/hotelslist/${city.id}`}>See all</Link></p>
                     </div>
                     <div>
                         <h3>Eat</h3>
                         <p>{city.eat_description}</p>
+                        <p><Link to={`/restaurantslist/${city.id}`}>See all</Link></p>
                     </div>
                 </div>
             </div>

@@ -5,9 +5,9 @@ export const fetchSpot = spotId => (
     })
 )
 
-export const fetchSpots = () => (
+export const fetchSpots = (cityId) => (
     $.ajax({
         method: 'GET',
-        url: '/api/spots'
+        url: `/api/spots?city_id=${cityId}`
     })
 )

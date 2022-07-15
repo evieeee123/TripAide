@@ -4,8 +4,8 @@ export const RECEIVE_SPOTS = "RECEIVE_SPOTS";
 export const RECEIVE_SPOT = "RECEIVE_SPOT";
 
 const receiveSpots = spots => ({
-    typs: RECEIVE_SPOTS,
-    spots
+    type: RECEIVE_SPOTS,
+    spots: spots
 })
 
 const receiveSpot = spot => ({
@@ -13,12 +13,12 @@ const receiveSpot = spot => ({
     spot
 });
 
-export const fetchSpots = () => dispatch => (
-    SpotApiUtil.fetchSpots()
+export const fetchSpots = (cityId) => dispatch => (
+    SpotApiUtil.fetchSpots(cityId)
         .then(spots => dispatch(receiveSpots(spots)))
 )
 
-export const fetchspot = spotId => dispatch => (
+export const fetchSpot = spotId => dispatch => (
     SpotApiUtil.fetchSpot(spotId)
         .then(spot => dispatch(receiveSpot(spot)))
 );

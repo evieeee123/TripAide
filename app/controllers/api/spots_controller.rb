@@ -1,7 +1,7 @@
 class Api::SpotsController < ApplicationController
 
     def index
-        @spots = Spot.all
+        @spots = Spot.where(city_id: params[:city_id])
         render "/api/spots/index"
     end
 

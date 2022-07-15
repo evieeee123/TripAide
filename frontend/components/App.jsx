@@ -5,7 +5,13 @@ import { Link } from "react-router-dom";
 import LoginFormContainer from "./session_form/login_form_container";
 import SignupFormContainer from "./session_form/signup_form_container";
 import { AuthRoute } from "../util/route_util";
-import CityContainer from "./cities/city_container"
+import HomePageConatiner from "./home/home_page_container";
+import SpotIndexContainer from "./spots/spot_index_container";
+import SpotContainer from "./spots/spot_container";
+import RestaurantIndexContainer from "./restaurants/restaurant_index_container";
+import CityContainer from "./cities/city_container";
+import RestaurantContainer from "./restaurants/restaurant_container";
+
 
 const App = () => (
     <div>
@@ -17,9 +23,14 @@ const App = () => (
         </header>
 
         <Switch>
-            <AuthRoute path="/login" component={LoginFormContainer} />
-            <AuthRoute path="/signup" component={SignupFormContainer} />
-            <Route path= "/cities/:cityId" component={CityContainer} />
+            <AuthRoute exact path="/login" component={LoginFormContainer} />
+            <AuthRoute exact path="/signup" component={SignupFormContainer} />
+            <Route path="/cities/:cityId" component={CityContainer} />
+            <Route path="/spotslist/:cityId" component={SpotIndexContainer} />
+            <Route path="/spots/:spotId" component={SpotContainer} />
+            <Route path="/restaurantslist/:cityId" component={RestaurantIndexContainer} />
+            <Route path="/restaurants/:restaurantId" component={RestaurantContainer} />
+            <Route path="/" component={HomePageConatiner} />
         </Switch>
     </div>
 );

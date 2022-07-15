@@ -4,7 +4,7 @@ export const RECEIVE_CITIES = "RECEIVE_CITIES";
 export const RECEIVE_CITY = "RECEIVE_CITY";
 
 const receiveCities = cities => ({
-    typs: RECEIVE_CITIES,
+    type: RECEIVE_CITIES,
     cities
 })
 

@@ -30,7 +30,7 @@ class LoginForm extends React.Component {
 
     handleDemo() {
         return this.props.processForm({
-            username: "guest",
+            username: "Demo88",
             // email: "guest@gmail.com",
             password: "123456"
         });
