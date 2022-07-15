@@ -40,8 +40,8 @@ class Greeting extends React.Component{
                 </div>
         ) : (
                 <div className='nav-session-button'>
-                    <span><Link to='/signup' className='nav-session-button-single' >Sign Up</Link></span>
-                    <span><Link to='/login' className='nav-session-button-single' >Login</Link></span>
+                    <Link to='/signup' className='nav-session-button-single' >Sign Up</Link>
+                    <Link to='/login' className='nav-session-button-single' >Login</Link>
                 </div>
            )
         return navBar

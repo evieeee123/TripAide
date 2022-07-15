@@ -56,10 +56,14 @@ class LoginForm extends React.Component {
         return (
             <div className='background-image-session'>
                 <div className="whole-form">
-                    <img src={window.logo} alt="logo" />
-                    <h2>Log in to unlock the best of TripAide.</h2>
+
+                    <div className="form-header">
+                        <img src={window.logo} alt="logo" className="form-logo" />
+                        <div>Log in to unlock the best of TripAide.</div>
+                    </div>
+
                     <form className="session-form">
-                        {this.renderErrors()}
+                        <div className="form-error">{this.renderErrors()}</div>
                         <input
                             className="signup-input"
                             type="text"

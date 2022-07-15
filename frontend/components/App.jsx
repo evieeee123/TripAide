@@ -17,7 +17,7 @@ const App = () => (
     <div>
         <header>
             <nav>
-                <h1><Link to='/'>Trip Aide</Link></h1>
+                <Link to='/'><img src={window.tripaide} alt="tripaide" className="nav-logo" /></Link>
                 <div><GreetingContainer /></div>
             </nav>
         </header>

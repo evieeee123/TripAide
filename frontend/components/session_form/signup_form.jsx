@@ -12,6 +12,10 @@ class SignupForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    componentDidMount() {
+        this.props.clearSessionErrors()
+    };
+
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
@@ -41,9 +45,13 @@ class SignupForm extends React.Component {
         return (
             <div className='background-image-session'>
                 <div className="whole-form">
-                    <h2>Create a new user</h2>
+                    <div className="form-header">
+                        <img src={window.logo} alt="logo" className="form-logo" />
+                        <div>Create a new user</div>
+                    </div>
+
                     <form className="session-form">
-                        {this.renderErrors()}
+                        <div className="form-error">{this.renderErrors()}</div>
                         <input 
                             className="signup-input" 
                             type="text"
@@ -67,10 +75,14 @@ class SignupForm extends React.Component {
                         />
 
                         <button onClick={this.handleSubmit}>{this.props.formType}</button>
-                        <p>
-                            Already have an account? 
-                            <Link to="/login" onClick={this.props.clearSessionErrors} className="session-link"> Log in </Link>
-                        </p>
+                        
+                        <div className='form-footer'>
+                            <span>
+                                Already have an account? 
+                                <Link to="/login" onClick={this.props.clearSessionErrors} className="session-link"> Log in </Link>
+                            </span
+                            >
+                        </div>
                     </form>
                 </div>
             </div>
