@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+require 'open-uri'
 
 User.destroy_all
 Spot.destroy_all
@@ -215,3 +216,9 @@ parma_cucina_italiana = Restaurant.create!({
     longtitude: "-117.16055514246736",
     latitude: "32.74769389781319"
 })
+
+
+san_francisco.photo.attach(io: open('https://active-storage-tripaide.s3.us-west-1.amazonaws.com/san-francisco.jpeg'), filename: 'san-francisco.jpeg')
+san_diego.photo.attach(io: open('https://active-storage-tripaide.s3.us-west-1.amazonaws.com/san-diego.jpeg'), filename: 'san-diego.jpeg')
+new_york_city.photo.attach(io: open('https://active-storage-tripaide.s3.us-west-1.amazonaws.com/new-york.jpeg'), filename: 'new-york.jpeg')
+seattle.photo.attach(io: open('https://active-storage-tripaide.s3.us-west-1.amazonaws.com/seattle.jpeg'), filename: 'seattle.jpeg')

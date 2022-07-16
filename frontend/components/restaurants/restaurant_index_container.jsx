@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
-import { fetchRestaurants, fetchRestaurant } from '../../actions/restaurant_actions';
+import { fetchRestaurants, fetchRestaurant, clearRestaurants } from '../../actions/restaurant_actions';
+import { clearSpots } from '../../actions/spot_actions';
 import { fetchCity } from '../../actions/city_actions';
 import ReataurantIndex from './restaurant_index';
 
@@ -14,6 +15,8 @@ const mSTP = (state, ownProps) => {
 const mDTP = dispatch => ({
     fetchRestaurants: (cityId) => dispatch(fetchRestaurants(cityId)),
     fetchRestaurant: (restaurantId) => dispatch(fetchRestaurant(restaurantId)),
+    clearRestaurants: () => dispatch(clearRestaurants()),
+    clearSpots: () => dispatch(clearSpots()),
     fetchCity: (cityId) => dispatch(fetchCity(cityId))
 })
 

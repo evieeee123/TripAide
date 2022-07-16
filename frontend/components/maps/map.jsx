@@ -32,11 +32,15 @@ class Map extends React.Component{
         this.MarkerManager = new MarkerManager(this.map);
         this.MarkerManager.updateMarkers(this.props.spots);
         // console.log(this.MarkerManager.markers)
+
     }
     
     
     componentWillUnmount(){
-        Object.values(this.MarkerManager.markers).forEach(marker => marker.setMap(null))
+        Object.values(this.MarkerManager.markers).forEach(marker => marker.setMap(null));
+        this.props.clearSpots();
+        this.props.clearRestaurants();
+        // console.log(this.props)
     }
         
     render(){

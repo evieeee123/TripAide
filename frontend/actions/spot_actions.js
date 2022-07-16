@@ -2,6 +2,8 @@ import * as SpotApiUtil from "../util/spots_api_util"
 
 export const RECEIVE_SPOTS = "RECEIVE_SPOTS";
 export const RECEIVE_SPOT = "RECEIVE_SPOT";
+export const CLEAR_SPOTS = "CLEAR_SPOTS";
+
 
 const receiveSpots = spots => ({
     type: RECEIVE_SPOTS,
@@ -11,6 +13,10 @@ const receiveSpots = spots => ({
 const receiveSpot = spot => ({
     type: RECEIVE_SPOT,
     spot
+});
+
+export const clearSpots = () => ({
+    type: CLEAR_SPOTS
 });
 
 export const fetchSpots = (cityId) => dispatch => (

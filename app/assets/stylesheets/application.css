@@ -55,8 +55,92 @@ nav {
     flex-direction: row;
     justify-content: space-between;
     position: sticky;
-    border-bottom: 1px solid lightgrey;
+    border-bottom: 0.5px solid lightgrey;
     padding: 10px 15px 10px;
+}
+
+.homepage-body{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.homepage-bg{
+    width: 100%;
+
+}
+
+/* search buttons */
+.search-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.search-buttons div{
+    margin: 3px;
+    margin-top: 30px;
+}
+
+.single-seach-button{
+    border: 1px solid black;
+    padding: 16px 10px 16px;
+    padding-right: 180px;
+    border-radius: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.single-seach-button:hover{
+    color: white;
+    background-color: black;
+}
+
+/* dream your trip */
+.city-list {
+    margin-top: 50px;
+    font-family: 'Almarai',sans-serif;
+}
+
+.city-list h3{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.city-list ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.homepage-img {
+    /* width: 261px;
+    height: 261px; */
+    width: 261px;
+    height: 100%;
+    background-color: rgb(254, 236, 204);
+}
+
+.container{
+    position: relative;
+    text-align: center;
+    color: white;
+    filter: contrast(110%);
+}
+
+.container:hover{
+    filter: brightness(80%);
+}
+
+.bottom-left{
+    position: absolute;
+    bottom: 8px;
+    left: 13px;
+    font-size: 30px;
+    font-weight: bolder;
 }
 
 #map-container {

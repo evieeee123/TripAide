@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { fetchSpots, fetchSpot } from '../../actions/spot_actions';
+import { fetchSpots, fetchSpot, clearSpots } from '../../actions/spot_actions';
 import { fetchCity } from '../../actions/city_actions';
 import SpotIndex from './spot_index';
 
@@ -14,6 +14,7 @@ const mSTP = (state, ownProps) => {
 const mDTP = dispatch => ({
     fetchSpots: (cityId) => dispatch(fetchSpots(cityId)),
     fetchSpot: (spotId) => dispatch(fetchSpot(spotId)),
+    clearSpots: () => dispatch(clearSpots()),
     fetchCity: (cityId) => dispatch(fetchCity(cityId))
 })
 

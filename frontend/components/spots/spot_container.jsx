@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { fetchSpots, fetchSpot } from "../../actions/spot_actions";
+import { fetchSpots, fetchSpot, clearSpots } from "../../actions/spot_actions";
 import Spot from "./spot";
 
 const mSTP = (state, ownProps) => ({
@@ -10,7 +10,8 @@ const mSTP = (state, ownProps) => ({
 
 const mDTP = (dispatch) => ({
     // fetchSpots: () => dispatch(fetchSpots()),
-    fetchSpot: (spotId) => dispatch(fetchSpot(spotId))
+    fetchSpot: (spotId) => dispatch(fetchSpot(spotId)),
+    clearSpots: () => dispatch(clearSpots())
 });
 
 export default connect(mSTP, mDTP)(Spot)

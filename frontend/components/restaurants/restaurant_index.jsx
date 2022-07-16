@@ -18,7 +18,7 @@ class RestaurantIndex extends React.Component {
         return (
             <div>
                 <h1>Restaurants in {city.name}</h1>
-                <Map spots={restaurants} city={city} />
+                <Map spots={restaurants} city={city} clearRestaurants={this.props.clearRestaurants} clearSpots={this.props.clearSpots} />
                 <ul>
                     {
                         restaurants.map(restaurant =>

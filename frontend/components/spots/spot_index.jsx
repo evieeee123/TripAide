@@ -18,7 +18,7 @@ class SpotIndex extends React.Component {
         return (
             <div>
                 <h1>Attractions in {city.name}</h1>
-                <Map spots={spots} city={city} />
+                <Map spots={spots} city={city} clearSpots={this.props.clearSpots} />
                 <ul>
                     {
                         spots.map(spot => 

@@ -1,3 +1,84 @@
 // Place all the styles related to the api/cities controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.city-page{
+    padding: 10px 70px;
+}
+
+.city-title{
+    padding-top: 20px;
+    padding-bottom: 24px;
+}
+
+.city-title span{
+    font-size: 60px;
+    font-weight: bolder;
+}
+
+.city-name{
+    color: red;
+}
+
+.citypage-img{
+    width: auto;
+    height: 360px;
+    border: 1px rgb(251, 235, 207) solid;
+    background-color: rgb(251, 237, 210);
+}
+
+.citypage-about{
+    width: 500px;
+    margin-top: 50px;
+}
+
+.citypage-about h2 {
+    font-size: 33px;
+    font-weight: bolder;
+}
+
+.citypage-about p {
+    margin-top: 30px;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.citypage-choose{
+    margin-top: 50px;
+}
+
+.citypage-choose h2{
+    font-size: 22px;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+
+.do-part h3{
+    font-size: 18px;
+    font-weight: bolder;
+    margin-bottom: 13px;
+}
+
+.do-part p{
+    width: 270px;
+}
+
+.single-city-img {
+    width: 229px;
+    height: 171px;
+    background-color: rgb(248, 233, 204);
+    // padding-right: 5px;
+    margin-right: 25px;
+}
+
+.cities{
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
+}
+
+.do-part{
+    display: flex;
+    flex-direction: row;
+    margin-top: 35px;
+}
