@@ -20,7 +20,7 @@ class Map extends React.Component{
                 lat: this.props.city.latitude,
                 lng: this.props.city.longtitude
             }, // San Francisco coords
-            zoom: 12
+            zoom: 11
         };
     }
 
@@ -40,6 +40,7 @@ class Map extends React.Component{
         Object.values(this.MarkerManager.markers).forEach(marker => marker.setMap(null));
         this.props.clearSpots();
         this.props.clearRestaurants();
+        this.props.clearHotels();
         // console.log(this.props)
     }
         

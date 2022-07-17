@@ -11,6 +11,8 @@ import SpotContainer from "./spots/spot_container";
 import RestaurantIndexContainer from "./restaurants/restaurant_index_container";
 import CityContainer from "./cities/city_container";
 import RestaurantContainer from "./restaurants/restaurant_container";
+import HotelContainer from "./hotels/hotel_container";
+import HotelIndexContainer from "./hotels/hotel_index_container";
 
 
 const App = () => (
@@ -30,6 +32,8 @@ const App = () => (
             <Route path="/spots/:spotId" component={SpotContainer} />
             <Route path="/restaurantslist/:cityId" component={RestaurantIndexContainer} />
             <Route path="/restaurants/:restaurantId" component={RestaurantContainer} />
+            <Route path="/hotelslist/:cityId" component={HotelIndexContainer} />
+            <Route path="/hotels/:hotelId" component={HotelContainer} />
             <Route path="/" component={HomePageConatiner} />
         </Switch>
     </div>

@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     resources :cities, only: [:show, :index]
     resources :spots, only: [:show, :index]
     resources :restaurants, only: [:show, :index]
+    resources :hotels, only: [:show, :index]
   end
 
 end
