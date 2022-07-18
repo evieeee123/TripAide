@@ -9,21 +9,28 @@ class City extends React.Component {
 
     componentDidMount(){
         // cityId depend on the routes in app.jsx
-        this.props.fetchCity(this.props.match.params.cityId)
+        this.props.fetchCity(this.props.match.params.cityId);
         // debugger
+        this.props.fetchSpots(this.props.match.params.cityId);
+        this.props.fetchHotels(this.props.match.params.cityId);
+        this.props.fetchRestaurants(this.props.match.params.cityId);
     }
 
     render(){
-        const { city } = this.props;
-        if (!city) return null;
+        const { city, spots, hotels, restaurants } = this.props;
+        if (!city || !spots || !hotels || !restaurants) return null;
         return (
             <div className="city-page">
                 <div className="city-title">
                     <span>Explore </span><span className="city-name"> {city.name}</span>
                 </div>
 
-                <div className="citypage-img">
-
+                <div className="city-img-box">
+                    <div className="city-img-left"><img src={window.trip} alt="trip" className="city-img-1" /></div>
+                    <div className="city-img-right">
+                        <img src={window.trip} alt="trip" className="city-img-2" />
+                        <img src={window.trip} alt="trip" className="city-img-2" />
+                    </div>
                 </div>
 
                 <div className="citypage-about">
@@ -36,44 +43,80 @@ class City extends React.Component {
                     <h2>Essential {city.name}</h2>
 
                     <div className="do-part">
-                        <div>
+                        <div className="do-info">
                             <h3>Do</h3>
                             <p>{city.do_description}</p>
-                            <p><Link to={`/spotslist/${city.id}`}>See all</Link></p>
+                            <p className="see-all"><Link to={`/spotslist/${city.id}`}>See all</Link></p>
                         </div>
-                        <div className="cities">
+                        <div className="spots-box">
+                            {/* <div className="single-city-img"></div>
                             <div className="single-city-img"></div>
-                            <div className="single-city-img"></div>
-                            <div className="single-city-img"></div>
+                            <div className="single-city-img"></div> */}
+                            <ul>
+                                {
+                                    spots.map(spot =>
+                                        <div key={spot.id} className="spots-img-box">
+                                            <Link to={`/spots/${spot.id}`}><img src={window.trip} alt="trip" className="single-spot-img" /></Link>
+                                            <div className="spots-box-info">
+                                                <Link to={`/spots/${spot.id}`} className="spot-box-name"><span >{spot.name}</span></Link>
+                                                <span className="spot-box-type">{spot.spot_type}</span>
+                                            </div>
+                                        </div>
+                                    )
+                                }
+                            </ul>
                         </div>
+                            <div className="spot-right-arrow"><img src={window.right_arrow} alt="arrow" className="right-icon" /></div>
                     </div>
 
                     <div className="do-part">
-                        <div>
+                        <div className="do-info">
                             <h3>Stay</h3>
                             <p>{city.stay_description}</p>
-                            <p><Link to={`/hotelslist/${city.id}`}>See all</Link></p>
+                            <p className="see-all"><Link to={`/hotelslist/${city.id}`}>See all</Link></p>
                         </div>
                     
-                        <div className="cities">
-                            <div className="single-city-img"></div>
-                            <div className="single-city-img"></div>
-                            <div className="single-city-img"></div>
+                        <div className="spots-box">
+                            <ul>
+                                {
+                                    hotels.map(hotel =>
+                                        <div key={hotel.id} className="spots-img-box">
+                                            <Link to={`/hotels/${hotel.id}`}><img src={window.trip} alt="trip" className="single-spot-img" /></Link>
+                                            <div className="spots-box-info">
+                                                <Link to={`/hotels/${hotel.id}`} className="spot-box-name"><span >{hotel.name}</span></Link>
+                                                <span className="spot-box-type">from {hotel.phonenum}/nignt</span>
+                                            </div>
+                                        </div>
+                                    )
+                                }
+                            </ul>
                         </div>
+                        <div className="spot-right-arrow"><img src={window.right_arrow} alt="arrow" className="right-icon" /></div>
                     </div>
 
                     <div className="do-part">
-                        <div>
+                        <div className="do-info">
                             <h3>Eat</h3>
                             <p>{city.eat_description}</p>
-                            <p><Link to={`/restaurantslist/${city.id}`}>See all</Link></p>
+                            <p className="see-all"><Link to={`/restaurantslist/${city.id}`}>See all</Link></p>
                         </div>
 
-                        <div className="cities">
-                            <div className="single-city-img"></div>
-                            <div className="single-city-img"></div>
-                            <div className="single-city-img"></div>
+                        <div className="spots-box">
+                            <ul>
+                                {
+                                    restaurants.map(restaurant =>
+                                        <div key={restaurant.id} className="spots-img-box">
+                                            <Link to={`/restaurants/${restaurant.id}`}><img src={window.trip} alt="trip" className="single-spot-img" /></Link>
+                                            <div className="spots-box-info">
+                                                <Link to={`/restaurants/${restaurant.id}`} className="spot-box-name"><span >{restaurant.name}</span></Link>
+                                                <span className="spot-box-type">{restaurant.price_range} &#183; {restaurant.special_diets} </span>
+                                            </div>
+                                        </div>
+                                    )
+                                }
+                            </ul>
                         </div>
+                        <div className="spot-right-arrow"><img src={window.right_arrow} alt="arrow" className="right-icon" /></div>
                     </div>
                 </div>
             </div>

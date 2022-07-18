@@ -18,21 +18,52 @@
     box-sizing: border-box;
     font-family: 'Didact Gothic', sans-serif;
     /* font-family: 'Almarai', sans-serif; */
+    padding: 70px 140px 30px;
 }
 
+/* review button */
+.review-button{
+    border: none;
+    display: flex;
+    flex-direction: row;
+    background-color: none;
+    cursor: pointer;
+}
 
+.review-button p{
+    font-size: 17px;
+    padding: 4px 4px 2px;
+    font-weight: bolder;
+}
 
-.nav-session-button-single {
-    background-color: black;
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    padding: 14px 10px 14px;
+.review-button:hover{
+    background-color: rgb(237, 237, 237);
+    padding: 7px 0px 7px;
     border-radius: 23px;
 }
 
+/* signup & login button */
+.nav-session-button-single {
+    background-color: black;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 9px 10px 9px;
+    border-radius: 23px;
+    border: none;
+}
+
+.nav-session-button-single a{
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-session-button-single:hover{
+    background-color: rgb(81, 81, 81);
+}
+
 .nav-session-button {
-    width: 160px;
+    width: 250px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -54,13 +85,22 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    position: sticky;
     border-bottom: 0.5px solid lightgrey;
-    padding: 10px 15px 10px;
+    padding: 10px 0px 10px;
+
+    position: fixed;
+    z-index: 2;
+    background-color: white;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 140px;
+    padding-right: 140px;
 }
 
+
 .homepage-body{
-    padding: 15px;
+    padding: 15px 0px 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -76,6 +116,7 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    width: auto;
 }
 
 .search-buttons div{
@@ -85,12 +126,15 @@ nav {
 
 .single-seach-button{
     border: 1px solid black;
-    padding: 16px 10px 16px;
-    padding-right: 180px;
+    padding: 16px 13px 16px;
+    /* padding-right: 180px; */
     border-radius: 15px;
     font-size: 20px;
     cursor: pointer;
     font-weight: bold;
+    width: 270px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .single-seach-button:hover{
@@ -112,23 +156,39 @@ nav {
 .city-list ul {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     margin-top: 30px;
+    overflow-x: scroll;
+    align-items: center;
 }
 
 .homepage-img {
-    /* width: 261px;
-    height: 261px; */
     width: 261px;
-    height: 100%;
+    height: 261px;
+    /* width: 100%; */
     background-color: rgb(254, 236, 204);
+    margin-right: 22px;
+    position: relative;
+}
+
+.right-arrow {
+    position: absolute;
+    margin-left: 73%;
+}
+
+.right-icon{
+    width: 40px;
+    cursor: pointer;
+
 }
 
 .container{
+    display: flex;
     position: relative;
     text-align: center;
     color: white;
     filter: contrast(110%);
+    width: auto;
+    height: auto;
 }
 
 .container:hover{
@@ -142,6 +202,8 @@ nav {
     font-size: 30px;
     font-weight: bolder;
 }
+
+
 
 #map-container {
     width: 300px;

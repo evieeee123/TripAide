@@ -2,9 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.city-page{
-    padding: 10px 70px;
-}
+// .city-page{
+//     // padding: 10px 70px;
+// }
 
 .city-title{
     padding-top: 20px;
@@ -20,12 +20,32 @@
     color: red;
 }
 
-.citypage-img{
-    width: auto;
-    height: 360px;
-    border: 1px rgb(251, 235, 207) solid;
-    background-color: rgb(251, 237, 210);
+// city img
+.city-img-1{
+    width: 654px;
+    height: 430px;
+    width: 100%;
+    padding-right: 1.5px;
 }
+
+.city-img-2 {
+    width: 480px;
+    height: 214px;
+    width: 100%;
+}
+
+.city-img-box{
+    // width: auto;
+    // height: 360px;
+    // border: 1px rgb(251, 235, 207) solid;
+    // background-color: rgb(251, 237, 210);
+
+    display: flex;
+    flex-direction: row;
+}
+
+
+
 
 .citypage-about{
     width: 500px;
@@ -41,6 +61,8 @@
     margin-top: 30px;
     font-size: 20px;
     line-height: 28px;
+    color: rgb(75, 75, 75);
+    width: 600px;
 }
 
 .citypage-choose{
@@ -48,37 +70,102 @@
 }
 
 .citypage-choose h2{
-    font-size: 22px;
+    font-size: 27px;
     font-weight: bolder;
     margin-bottom: 20px;
 }
 
+// do
+
 .do-part h3{
-    font-size: 18px;
+    font-size: 24px;
     font-weight: bolder;
-    margin-bottom: 13px;
+    margin-bottom: 15px;
+}
+
+.see-all a{
+    color: black;
+    font-weight: bolder;
+    font-size: 16px;
 }
 
 .do-part p{
     width: 270px;
+    font-size: 18px;
+    margin-bottom: 15px;
+    line-height: 22px;
 }
 
-.single-city-img {
-    width: 229px;
-    height: 171px;
-    background-color: rgb(248, 233, 204);
+.do-info{
+    display: flex;
+    flex-direction: column;
+    width: 267px;
+    height: 267px;
+}
+
+.single-spot-img {
+    width: 267px;
+    height: 192px;
     // padding-right: 5px;
     margin-right: 25px;
+    padding-bottom: 8px;
 }
 
-.cities{
+.single-spot-img:hover{
+    filter: brightness(110%);
+}
+
+.spots-box{
     display: flex;
     flex-direction: row;
     margin-left: 30px;
+    overflow-x: scroll;
+}
+
+.spots-box ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.spots-box-info{
+    display: flex;
+    flex-direction: column;
+    height: 63px;
+    justify-content: space-between;
+}
+
+.spot-box-name{
+    font-size: 18px;
+    font-weight: bolder;
+    color: black;
+    text-decoration: none;
+}
+
+.spot-box-name:hover{
+    color: rgb(91, 91, 91);
+}
+
+.spot-box-type{
+    font-size: 15px;
+    color: rgb(57, 57, 57);
+    width: 267px;
 }
 
 .do-part{
     display: flex;
     flex-direction: row;
     margin-top: 35px;
+}
+
+// .spots-box .spot-right-arrow{
+//     display: flex;
+//     // float: right;
+//     // float: inline-end;
+//     // position: sticky;
+//     z-index: 1;
+
+// }
+
+.spot-right-arrow{
+    margin-top: 75px;
 }

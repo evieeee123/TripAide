@@ -17,20 +17,29 @@ class SpotIndex extends React.Component {
         if(spots.length === 0 || !city) return null;
         return (
             <div>
-                <h1>Attractions in {city.name}</h1>
-                <Map spots={spots} city={city} clearSpots={this.props.clearSpots} clearRestaurants={this.props.clearRestaurants} clearHotels={this.props.clearHotels} />
-                <ul>
-                    {
-                        spots.map(spot => 
-                            
-                            <div key={spot.id}>
-                                <div><Link to={`/spots/${spot.id}`}>{spot.name}</Link></div>
-                                <div>{ spot.spot_type }</div>
-                            </div> 
-                            
-                        )
-                    }
-                </ul>
+                <div className="spot-index-title">Attractions in {city.name}</div>
+                <div id className="spot-index-body">
+                    <div className="map">
+                        <Map spots={spots} city={city} clearSpots={this.props.clearSpots} clearRestaurants={this.props.clearRestaurants} clearHotels={this.props.clearHotels} />
+                    </div>
+
+                    <ul>
+                        {
+                            spots.map(spot => 
+
+                                <div key={spot.id} className="single-spot">
+                                    <div><img src={window.trip} alt="trip" className="spot-index-img"/></div>
+                                    <div className="spot-index-info">
+                                        <div className="spot-index-name"><Link to={`/spots/${spot.id}`}>{spot.name}</Link></div>
+                                        <div>{ spot.spot_type }</div>
+                                    </div>
+                                </div> 
+
+                            )
+                        }
+                    </ul>
+
+                </div>
             </div>
         )
     }

@@ -36,12 +36,15 @@ class Greeting extends React.Component{
     render() {
         const navBar = this.props.currentUser ? (
                 <div className='navbar-logout'>
-                        <ProfileDropdown handleLogout={this.handleLogout} />
+                        <ProfileDropdown handleLogout={this.handleLogout} currentUser={this.props.currentUser} />
                 </div>
         ) : (
                 <div className='nav-session-button'>
-                    <Link to='/signup' className='nav-session-button-single' >Sign Up</Link>
-                    <Link to='/login' className='nav-session-button-single' >Login</Link>
+                    <div className='review-button'><span class="material-symbols-outlined">
+                        edit 
+                    </span><p> Review</p></div>
+                    <button className='nav-session-button-single'><Link to='/signup' >Sign Up</Link></button>
+                    <button className='nav-session-button-single'><Link to='/login'>Login</Link></button>
                 </div>
            )
         return navBar

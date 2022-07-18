@@ -1,3 +1,62 @@
 // Place all the styles related to the api/spots controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+div id {
+    // resize: 0;
+    // padding-top: 200px;
+    background-color: rgb(231, 231, 231);
+}
+
+.spot-index-title{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin-bottom: 10px;
+    font-size: 35px;
+    font-weight: bolder;
+    color: rgb(49, 49, 49);
+}
+
+.spot-index-body{
+    background-color: rgb(243, 243, 243);
+    width: auto;
+    // display: flex;
+    // flex-direction: row;
+}
+
+.map{
+    padding: 20px;
+    background-color: white;
+    float: left;
+    border: 1px solid lightgrey;
+    margin-right: 30px;
+    border-radius: 5px;
+}
+
+.single-spot{
+    border: 1px lightgrey solid;
+    display: flex;
+    flex-direction: row;
+    height: 212px;
+    margin-bottom: 20px;
+    background-color: white;
+    // margin-top: 20px;
+}
+
+.spot-index-img{
+    width: 267px;
+    height: 100%;
+}
+
+.spot-index-name a{
+    font-size: 20px;
+    font-weight: bolder;
+    font-weight: bolder;
+    text-decoration: none;
+    color: black;
+}
+
+.spot-index-info{
+    padding: 20px;
+}
