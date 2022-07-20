@@ -13,6 +13,8 @@ import CityContainer from "./cities/city_container";
 import RestaurantContainer from "./restaurants/restaurant_container";
 import HotelContainer from "./hotels/hotel_container";
 import HotelIndexContainer from "./hotels/hotel_index_container";
+import CreateReviewContainer from "./reviews/create_review_form_container";
+import EditReviewContainer from "./reviews/edit_review_form_container";
 
 
 const App = () => (
@@ -30,6 +32,8 @@ const App = () => (
             <AuthRoute exact path="/login" component={LoginFormContainer} />
             <AuthRoute exact path="/signup" component={SignupFormContainer} />
             <Route path="/cities/:cityId" component={CityContainer} />
+            <Route path="/spots/:spotId/reviews/:reviewId/edit" component={EditReviewContainer} />
+            <Route path="/spots/:spotId/reviews/new" component={CreateReviewContainer} />
             <Route path="/spotslist/:cityId" component={SpotIndexContainer} />
             <Route path="/spots/:spotId" component={SpotContainer} />
             <Route path="/restaurantslist/:cityId" component={RestaurantIndexContainer} />

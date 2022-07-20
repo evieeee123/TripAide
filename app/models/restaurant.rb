@@ -8,4 +8,7 @@ class Restaurant < ApplicationRecord
         foreign_key: :city_id,
         class_name: :City
 
+    has_many :reviews, :as => :reviewable
+
+
 end

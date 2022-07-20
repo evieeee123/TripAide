@@ -1,0 +1,175 @@
+// Place all the styles related to the api/reviews controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+// form
+
+// .form-rating{
+//     width: 160px;
+//     height: 32px;
+//     display: flex;
+//     flex-direction: row;
+// }
+.create-review-page{
+    padding: 70px 140px 30px;
+}
+
+.revivew-form-left{
+    border-right: 0.5px solid rgb(229, 229, 229);
+    box-shadow: 2px 2px rgb(239, 239, 239);
+    max-width: 600px;
+    padding-right: 50px;
+}
+
+.rating-circle{
+    font-size: 23px;
+    color: rgb(250, 249, 249);
+    text-decoration: none;
+    padding: 0px;
+    border: 3px solid green;
+    border-radius: 50px;
+    margin: 3px;
+}
+
+#rating-1{
+    display: none;
+}
+
+#rating-2 {
+    display: none;
+}
+
+#rating-3 {
+    display: none;
+}
+
+#rating-4 {
+    display: none;
+}
+
+#rating-5 {
+    display: none;
+}
+
+.rating-circle:hover{
+    font-size: 23px;
+    color: #00aa6c;
+    text-decoration: none;
+    padding: 0px;
+    border: 3px solid #00aa6c;
+    border-radius: 50px;
+    margin: 3px;
+}
+
+.create-review-welcome{
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px lightgray solid;
+    font-size: 17px;
+    font-weight: bolder;
+}
+
+.create-review-form{
+    margin-top: 35px;
+}
+
+.rating-title{
+    font-size: 16px;
+    font-weight: bolder;
+    margin-bottom: 15px;
+}
+
+.square {
+    width: auto;
+    height: auto;
+    background-color: #00aa6c;
+
+    margin-left: 40px;
+    position: relative;
+}
+
+.square:before {
+    border-bottom: 13.5px solid transparent;
+    border-top: 13.5px solid transparent;
+    border-right: 16px solid #00aa6c;
+    content: "";
+    height: 0;
+    left: 0;
+    position: absolute;
+    left: -16px;
+    width: 0;
+}
+
+.square p {
+    // position: absolute;
+    bottom: 6px;
+    left: 13px;
+    font-size: 15px;
+    font-weight: bolder;
+    color: white;
+    padding: 6px;
+}
+
+.whole-rating{
+    width: 350px;
+    display: flex;
+    flex-direction: row;
+    // justify-content: space-between;
+    align-items: center;
+}
+
+.review-title{
+    margin-top: 50px;
+}
+
+.review-title input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid #ccc;
+    border-top: 3px solid #ccc;
+    // border-radius: 4px;
+    box-sizing: border-box;
+    outline: none;
+    margin-bottom: 35px;
+}
+
+.review-title input[type=text]:focus {
+    border: 3px solid #00aa6c;
+}
+
+textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid #ccc;
+    border-top: 3px solid #ccc;
+    // border-radius: 4px;
+    box-sizing: border-box;
+    outline: none;
+    margin-bottom: 33px;
+}
+
+textarea:focus {
+    border: 3px solid #00aa6c;
+}
+
+input[type=date]{
+    display: inline-block;
+    padding: 0px;
+    margin-bottom: 35px;
+}
+
+.submit-review-button{
+    padding: 12px 18px 12px;
+    font-size: 16px;
+    font-weight: bolder;
+    background-color: black;
+    color: white;
+    border-radius: 3px;
+    border: none;
+}

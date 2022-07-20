@@ -8,11 +8,12 @@
 
 # require 'open-uri'
 
-User.destroy_all
+Review.destroy_all
 Spot.destroy_all
-City.destroy_all
 Restaurant.destroy_all
 Hotel.destroy_all
+City.destroy_all
+User.destroy_all
 
 
 # demo user 
@@ -795,6 +796,60 @@ edison = Hotel.create!({
     latitude: "40.75964255271943"
 })
 
+# review 1
+review1 = Review.create!({
+    user_id: cindy.id,
+    title: 'weekend market at Ferry Building',
+    body: "The Empanadas and Red Bay coffee was so good, we went back for a second morning. Great collection of stores in the building, and lots of vendors outside for Saturday market.",
+    rating: 4,
+    visit_date: DateTime.new(2022, 6, 20),
+    reviewable_id: ferry_building.id,
+    reviewable_type: ferry_building.class.to_s
+})
+
+# review 2
+review2 = Review.create!({
+    user_id: adam.id,
+    title: 'Nice to visit and for a walk outside',
+    body: "This is worth a stop if you are in the area. There are various sellers that are still more reflective of San Francisco (vs. National store chains). Then take a walk and look at the Bay Bridge outside or the water",
+    rating: 5,
+    visit_date: DateTime.new(2022, 6, 10),
+    reviewable_id: ferry_building.id,
+    reviewable_type: ferry_building.class.to_s
+})
+
+# review 3
+review3 = Review.create!({
+    user_id: brian.id,
+    title: 'Try a Baked char siu bao',
+    body: "Lively area full of mostly family owned restaurants and businesses. We visited The Golden Gate Fortune Cookie Factory it's small but lively and they give out free samples. If you can ride the cable car to this destination.",
+    rating: 4,
+    visit_date: DateTime.new(2022, 6, 23),
+    reviewable_id: chinatown.id,
+    reviewable_type: chinatown.class.to_s
+})
+
+# review 4
+review4 = Review.create!({
+    user_id: lucy.id,
+    title: 'Always a cool place to visit',
+    body: "San Francisco never disappoints … and Chinatown it's a must in your visit to the city , if you're tired of walking around the city a foot massage can be a great idea, lots of shoppings and cultural things g to do and see at the Chinatown area",
+    rating: 5,
+    visit_date: DateTime.new(2022, 6, 20),
+    reviewable_id: chinatown.id,
+    reviewable_type: chinatown.class.to_s
+})
+
+# review 5
+review5 = Review.create!({
+    user_id: evie.id,
+    title: 'Canton Tower',
+    body: "Canton Tower lights up at night. There's plenty to do around the area, especially the Guangzhou library (which is massive).",
+    rating: 4,
+    visit_date: DateTime.new(2022, 6, 20),
+    reviewable_id: canton_tower.id,
+    reviewable_type: canton_tower.class.to_s
+})
 
 # san_francisco.photo.attach(io: open('https://active-storage-tripaide.s3.us-west-1.amazonaws.com/san-francisco.jpeg'), filename: 'san-francisco.jpeg')
 # san_diego.photo.attach(io: open('https://active-storage-tripaide.s3.us-west-1.amazonaws.com/san-diego.jpeg'), filename: 'san-diego.jpeg')

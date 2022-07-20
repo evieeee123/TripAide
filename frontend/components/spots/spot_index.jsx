@@ -16,8 +16,8 @@ class SpotIndex extends React.Component {
         const {spots, city} = this.props;
         if(spots.length === 0 || !city) return null;
         return (
-            <div>
-                <div className="spot-index-title">Attractions in {city.name}</div>
+            <div className="spot-index-page">
+                <div className="spots-index-title">Attractions in {city.name}</div>
                 <div id className="spot-index-body">
                     <div className="map">
                         <Map spots={spots} city={city} clearSpots={this.props.clearSpots} clearRestaurants={this.props.clearRestaurants} clearHotels={this.props.clearHotels} />

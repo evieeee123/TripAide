@@ -4,6 +4,7 @@ import ReactDOM from "react-dom";
 import {fetchCity, fetchCities} from "./util/cities_api_util"
 import { fetchSpot, fetchSpots } from "./util/spots_api_util"
 import { fetchRestaurants , fetchRestaurant } from "./util/restaurants_api_util"
+import { fetchReview } from "./util/reviews_api_util";
 
 
 import configureStore from './store/store';
@@ -34,6 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.fetchSpots = fetchSpots;
     window.fetchRestaurant = fetchRestaurant;
     window.fetchRestaurants = fetchRestaurants;
+    window.fetchReview = fetchReview;
 
     
     window.getState = store.getState;

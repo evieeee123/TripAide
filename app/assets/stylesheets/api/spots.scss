@@ -2,27 +2,28 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-div id {
-    // resize: 0;
-    // padding-top: 200px;
-    background-color: rgb(231, 231, 231);
+.spot-index-page{
+    background-color: rgb(239, 238, 238);
 }
 
-.spot-index-title{
+.spots-index-title{
     display: flex;
     justify-content: center;
     padding: 20px;
+    padding-top: 100px;
     margin-bottom: 10px;
     font-size: 35px;
     font-weight: bolder;
     color: rgb(49, 49, 49);
+    background-color: white;
 }
 
 .spot-index-body{
-    background-color: rgb(243, 243, 243);
+    // background-color: rgb(243, 243, 243);
     width: auto;
     // display: flex;
     // flex-direction: row;
+    padding: 50px;
 }
 
 .map{
@@ -32,6 +33,7 @@ div id {
     border: 1px solid lightgrey;
     margin-right: 30px;
     border-radius: 5px;
+    margin-left: 50px;
 }
 
 .single-spot{
@@ -41,7 +43,7 @@ div id {
     height: 212px;
     margin-bottom: 20px;
     background-color: white;
-    // margin-top: 20px;
+    margin-right: 50px;
 }
 
 .spot-index-img{
@@ -59,4 +61,54 @@ div id {
 
 .spot-index-info{
     padding: 20px;
+}
+
+
+
+// spot show page
+.spot-show-page{
+    margin-top: 60px;
+    padding: 70px 140px 30px;
+}
+
+.spot-show-title{
+    font-size: 50px;
+    font-weight: bolder;
+    margin-bottom: 40px;
+}
+
+.spot-type{
+    font-size: 15px;
+    margin-bottom: 40px;
+}
+
+.spot-about{
+    border: 1px solid rgb(226, 226, 226);
+    box-shadow: 0px 0px 2px 2px rgb(241, 241, 241);
+    border-radius: 10px;
+    padding: 40px 20px 20px 30px;
+    margin-right: 30px;
+}
+
+.spot-show-info{
+    display: flex;
+    flex-direction: row;
+}
+
+.spot-about h2{
+    font-size: 25px;
+    font-weight: bolder;
+    margin-bottom: 30px;
+}
+
+.spot-about h3 {
+    font-size: 19px;
+    font-weight: bolder;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.spot-about-dt{
+    font-size: 17px;
+    line-height: 20px;
 }

@@ -80,8 +80,7 @@ class SignupForm extends React.Component {
                             <span>
                                 Already have an account? 
                                 <Link to="/login" onClick={this.props.clearSessionErrors} className="session-link"> Log in </Link>
-                            </span
-                            >
+                            </span>
                         </div>
                     </form>
                 </div>

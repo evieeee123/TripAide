@@ -7,9 +7,12 @@ Rails.application.routes.draw do
     resources :users, only: [:create]
     resource :session, only: [:create, :destroy, :show]
     resources :cities, only: [:show, :index]
-    resources :spots, only: [:show, :index]
-    resources :restaurants, only: [:show, :index]
-    resources :hotels, only: [:show, :index]
+    resources :spots, only: [:index, :show]
+    resources :restaurants, only: [:index, :show]
+    resources :hotels, only: [:index, :show]
+
+    resources :reviews, only: [:show, :create, :update, :destroy]
+
   end
 
 end
