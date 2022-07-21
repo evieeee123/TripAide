@@ -1,4 +1,6 @@
 import React from "react";
+import { clearReviews } from "../../actions/review_actions";
+import Review from "../reviews/review";
 
 class Restaurant extends React.Component{
 
@@ -11,14 +13,15 @@ class Restaurant extends React.Component{
     }
 
     render(){
-        const {restaurant} = this.props;
+        const {restaurant, reviews, currentUser, places, clearReviews} = this.props;
         if (!restaurant) return null;
+        if (reviews.length === 0) return null;
 
         return (
-            <div>
+            <div className="restaurant-show-page">
 
+                <div className="spot-show-title">{restaurant.name}</div>
                 <div>
-                    <h1>{restaurant.name}</h1>
                     <ul>
                         <li>{restaurant.price_range} {restaurant.cuisines}</li>
                         <li>{restaurant.res_address} {restaurant.phonenum}</li>
@@ -43,6 +46,10 @@ class Restaurant extends React.Component{
                             <p>{restaurant.cuisines}</p>
                         </div>
                     </div>
+                </div>
+
+                <div>
+                    <Review reviews={reviews} place={restaurant} places={places} currentUser={currentUser} clearReviews={clearReviews} />
                 </div>
 
             </div>

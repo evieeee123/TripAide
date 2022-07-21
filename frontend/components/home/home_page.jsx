@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import SearchContainer from "../search/search_container";
 
 class HomePage extends React.Component {
     constructor(props) {
@@ -16,9 +17,11 @@ class HomePage extends React.Component {
         return (
             <div className="homepage-body">
 
-                <div>
+                {/* <div>
                     <img src={window.background} alt="background" className="homepage-bg" />
-                </div>
+                </div> */}
+
+                <div><SearchContainer /></div>
 
                 <div className="search-buttons">
                     <div className="single-seach-button">

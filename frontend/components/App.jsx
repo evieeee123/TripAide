@@ -32,8 +32,10 @@ const App = () => (
             <AuthRoute exact path="/login" component={LoginFormContainer} />
             <AuthRoute exact path="/signup" component={SignupFormContainer} />
             <Route path="/cities/:cityId" component={CityContainer} />
-            <Route path="/spots/:spotId/reviews/:reviewId/edit" component={EditReviewContainer} />
-            <Route path="/spots/:spotId/reviews/new" component={CreateReviewContainer} />
+            {/* <Route path="/spots/:spotId/reviews/:reviewId/edit" component={EditReviewContainer} />
+            <Route path="/spots/:spotId/reviews/new" component={CreateReviewContainer} /> */}
+            <Route path="/:placeType/:placeId/reviews/:reviewId/edit" component={EditReviewContainer} />
+            <Route path="/:placeType/:placeId/reviews/new" component={CreateReviewContainer} />
             <Route path="/spotslist/:cityId" component={SpotIndexContainer} />
             <Route path="/spots/:spotId" component={SpotContainer} />
             <Route path="/restaurantslist/:cityId" component={RestaurantIndexContainer} />

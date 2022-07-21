@@ -10,9 +10,9 @@ const receiveHotels = hotels => ({
     hotels
 })
 
-const receiveHotel = hotel => ({
+const receiveHotel = payloadHotel => ({
     type: RECEIVE_HOTEL,
-    hotel
+    payloadHotel
 });
 
 export const clearHotels = () => ({

@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Rating from "../rating/rating";
+
 
 class City extends React.Component {
 
@@ -59,6 +61,7 @@ class City extends React.Component {
                                             <Link to={`/spots/${spot.id}`}><img src={window.trip} alt="trip" className="single-spot-img" /></Link>
                                             <div className="spots-box-info">
                                                 <Link to={`/spots/${spot.id}`} className="spot-box-name"><span >{spot.name}</span></Link>
+                                                {/* <span><Rating rate={rate} /></span> */}
                                                 <span className="spot-box-type">{spot.spot_type}</span>
                                             </div>
                                         </div>

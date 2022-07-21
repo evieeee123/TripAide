@@ -1,4 +1,6 @@
-json.extract! @restaurant, :id, :city_id, :name, :price_range, :description, :cuisines, :special_diets, :meals, :phonenum, :res_address, :longtitude, :latitude
+json.restaurant do
+    json.extract! @restaurant, :id, :city_id, :name, :price_range, :description, :cuisines, :special_diets, :meals, :phonenum, :res_address, :longtitude, :latitude
+end
 
 json.reviews do 
     reviews = @restaurant.reviews.includes(:user)

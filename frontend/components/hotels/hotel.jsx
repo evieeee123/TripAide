@@ -1,4 +1,5 @@
 import React from "react";
+import Review from "../reviews/review";
 
 class Hotel extends React.Component {
 
@@ -11,14 +12,17 @@ class Hotel extends React.Component {
     }
 
     render() {
-        const { hotel } = this.props;
+        const { hotel, reviews, currentUser, places } = this.props;
         if (!hotel) return null;
+        if (reviews.length === 0) return null;
+
 
         return (
-            <div>
+            <div className="hotel-show-page">
 
+                <div className="spot-show-title">{hotel.name}</div>
+                    
                 <div>
-                    <h1>{hotel.name}</h1>
                     <ul>
                         <li>{hotel.address}</li>
                     </ul>
@@ -30,6 +34,10 @@ class Hotel extends React.Component {
                             <p>{hotel.description}</p>
                         </div>
                     </div>
+                </div>
+
+                <div>
+                    <Review reviews={reviews} place={hotel} places={places} currentUser={currentUser} />
                 </div>
 
             </div>

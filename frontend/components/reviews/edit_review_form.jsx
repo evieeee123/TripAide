@@ -7,10 +7,19 @@ class CreateReviewForm extends React.Component {
     constructor(props) {
         super(props)
 
+        let type_name;
+        if (this.props.place === "spot") {
+            type_name = "Spot"
+        } else if (this.props.place === "hotel") {
+            type_name = "Hotel"
+        } else if (this.props.place === "restaurant") {
+            type_name = "Restaurant"
+        }
+
         this.state = {
             user_id: this.props.user_id,
-            reviewable_id: this.props.match.params.spotId,
-            reviewable_type: "Spot",
+            reviewable_id: this.props.match.params.placeId,
+            reviewable_type: type_name,
             rating: 0,
             title: "",
             body: "",
@@ -21,7 +30,15 @@ class CreateReviewForm extends React.Component {
 
     componentDidMount() {
         this.props.clearReviewErrors()
-        this.props.fetchSpot(this.props.match.params.spotId);
+        // this.props.fetchSpot(this.props.match.params.spotId);
+        if (this.props.place === "spot") {
+            // can't use spotId because of the Route
+            this.props.fetchSpot(this.props.match.params.placeId);
+        } else if (this.props.place === "hotel") {
+            this.props.fetchHotel(this.props.match.params.placeId);
+        } else if (this.props.place === "restaurant") {
+            this.props.fetchRestaurant(this.props.match.params.placeId);
+        }
         this.props.fetchReview(this.props.match.params.reviewId)
             .then((e) => this.prefillState())
     };
@@ -35,8 +52,8 @@ class CreateReviewForm extends React.Component {
     prefillState(e){
         this.setState({
             user_id: this.props.user_id,
-            reviewable_id: this.props.match.params.spotId,
-            reviewable_type: "Spot",
+            reviewable_id: this.props.match.params.placeId,
+            reviewable_type: type_name,
             rating: this.props.review.rating,
             title: this.props.review.title,
             body: this.props.review.body,
@@ -47,7 +64,7 @@ class CreateReviewForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.updateReview(this.state)
-            .then(() => this.props.history.push(`/spots/${this.props.spot.id}`))
+            .then(() => this.props.history.push(`/${this.props.placeType}/${this.props.place.id}`))
     }
 
     update(field) {
@@ -67,7 +84,7 @@ class CreateReviewForm extends React.Component {
             return "Poor"
         } else if (this.state.rating === 3) {
             return "Average"
-        } else if (this.state.rating === 2) {
+        } else if (this.state.rating === 4) {
             return "Very Good"
         } else if (this.state.rating === 5) {
             return "Excellent"
@@ -87,8 +104,8 @@ class CreateReviewForm extends React.Component {
     }
 
     render() {
-        const { currentUser, spot } = this.props;
-        if (!spot) return null;
+        const { currentUser, place } = this.props;
+        if (!place) return null;
         return (
             <div className="create-review-page">
 
@@ -104,19 +121,19 @@ class CreateReviewForm extends React.Component {
                         <div className="whole-rating">
                             <div className="form-rating">
                                 <label htmlFor="rating-1"><input id="rating-1" type="radio" value="1" name="rating" onChange={this.update("rating")} checked={parseInt(this.state.rating) === 1}  />
-                                    <BsCircleFill className="rating-circle" /></label>
+                                    <BsCircleFill className="rating-circle" style={this.state.rating >= 1 ? { color: '#00aa6c' } : { color: 'white' }} /></label>
 
                                 <label htmlFor="rating-2"><input id="rating-2" type="radio" value="2" name="rating" onChange={this.update("rating")} checked={parseInt(this.state.rating) === 2} />
-                                    <BsCircleFill className="rating-circle" /></label>
+                                    <BsCircleFill className="rating-circle" style={this.state.rating >= 2 ? { color: '#00aa6c' } : { color: 'white' }} /></label>
 
                                 <label htmlFor="rating-3"><input id="rating-3" type="radio" value="3" name="rating" onChange={this.update("rating")} checked={parseInt(this.state.rating) === 3} />
-                                    <BsCircleFill className="rating-circle" /></label>
+                                    <BsCircleFill className="rating-circle" style={this.state.rating >= 3 ? { color: '#00aa6c' } : { color: 'white' }} /></label>
 
                                 <label htmlFor="rating-4"><input id="rating-4" type="radio" value="4" name="rating" onChange={this.update("rating")} checked={parseInt(this.state.rating) === 4} />
-                                    <BsCircleFill className="rating-circle" /></label>
+                                    <BsCircleFill className="rating-circle" style={this.state.rating >= 4 ? { color: '#00aa6c' } : { color: 'white' }} /></label>
 
                                 <label htmlFor="rating-5"><input id="rating-5" type="radio" value="5" name="rating" onChange={this.update("rating")} checked={parseInt(this.state.rating) === 5}/>
-                                    <BsCircleFill className="rating-circle" /></label>
+                                    <BsCircleFill className="rating-circle" style={this.state.rating >= 5 ? { color: '#00aa6c' } : { color: 'white' }} /></label>
                             </div>
 
                             <div>

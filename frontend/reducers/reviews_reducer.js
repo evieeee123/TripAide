@@ -1,5 +1,7 @@
-import { receiveReview, RECEIVE_REVIEW, REMOVE_REVIEW } from "../actions/review_actions";
+import { receiveReview, RECEIVE_REVIEW, REMOVE_REVIEW, CLEAR_REVIEWS } from "../actions/review_actions";
+import { RECEIVE_RESTAURANT } from "../actions/restaurant_actions";
 import { RECEIVE_SPOT } from "../actions/spot_actions";
+import { RECEIVE_HOTEL } from "../actions/hotel_actions";
 
 const reviewReducer = (state = {}, action) => {
     Object.freeze(state);
@@ -15,7 +17,13 @@ const reviewReducer = (state = {}, action) => {
             delete nextState[action.reviewId]
             return nextState;
         case RECEIVE_SPOT:
-            return action.payload.reviews
+            return action.payload.reviews;
+        case RECEIVE_RESTAURANT:
+            return action.payloadRestaurant.reviews;
+        case RECEIVE_HOTEL:
+            return action.payloadHotel.reviews;
+        case CLEAR_REVIEWS:
+            return {};
         default:
             return state;
     }

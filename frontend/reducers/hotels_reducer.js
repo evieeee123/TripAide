@@ -7,7 +7,7 @@ const hotelsReducer = (state = {}, action) => {
         case RECEIVE_HOTELS:
             return action.hotels;
         case RECEIVE_HOTEL:
-            return Object.assign({}, state, { [action.hotel.id]: action.hotel })
+            return Object.assign({}, state, { [action.payloadHotel.hotel.id]: action.payloadHotel.hotel })
         case CLEAR_HOTELS:
             return {};
         default:

@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { deleteReview } from "../../actions/review_actions";
+import ReviewItem from "./review_item"
+import { clearReviews } from "../../actions/review_actions";
 
 class Review extends React.Component {
     constructor(props){
@@ -12,7 +14,7 @@ class Review extends React.Component {
     // componentDidMount(){
     //     // this.props.fetchReview(this.props.params.match.reviewId);
     //     // this.props.fetchSpot(this.props.match.params.spotId)
-
+        // this.props.clearReviews();
     // }
 
     // handleDelete(e) {
@@ -22,41 +24,74 @@ class Review extends React.Component {
     // }
 
     handleUserState(){
-        const {currentUser, spot} = this.props;
+        const {currentUser, place, places} = this.props;
         if (currentUser === undefined){
             return `/login`
         }else{
-            return `/spots/${spot.id}/reviews/new`
+            return `/${places}/${place.id}/reviews/new`
         }
     }
+
 
     render(){
         console.log(this.props)
         const {reviews, spot} = this.props;
+        // if (reviews.length === 0) return null;
+
         return (
-            <div>
-                <div><Link to={this.handleUserState}>Write review</Link></div>
+            <div className="review-box">
+                <div className="inner-review-box">
+                    <div className="review-header">
+                        <div className="review-header-title">Review<span>({reviews.length})</span></div>
+                        <button className="review-header-button"><Link to={this.handleUserState}>Write review</Link></button>
+                    </div>
 
-                {
-                    reviews.map((review) => 
-                        <div key={review.id}>
-                            <div>{review.reviewer}</div>
-                            <div>{review.rating}</div>
+                    <div>
+                    {
+                        reviews.map((review) => 
+                            <div key={review.id} className="single-review-box">
+                                <div className="review-user-box">
+                                    <div className="review-user-profile-box">
+                                        <img src={window.user_profile_icon} alt="user_profile_icon" className="user-profile-icon" />
+                                        <div>{review.reviewer}</div>
+                                    </div>
 
-                            <div>
-                                <p>{review.title}</p>
-                                <p>{review.body}</p>
-                                <p>Date of visit:{review.visit_date}</p>
+                                    <div className="r-bar">
+                                        <div className="review-title-bar">
+                                            <div>
+                                                <div><ReviewItem rating={review.rating}/></div>
+                                                <p className="single-review-title">{review.title}</p>
+                                            </div>
+
+                                            {
+                                                (this.props.currentUser && this.props.currentUser.id === review.user_id) ? <div className="review-dropdown"  >
+                                                    <span className="material-symbols-outlined" >
+                                                        more_vert
+                                                    </span>
+                                                    <div className='review-dropdown-box'>
+                                                        <button className='review-dropdown-edit'><Link to={`/spots/${review.reviewable_id}/reviews/${review.id}/edit`}>Edit review</Link></button>
+                                                        <button onClick={() => dispatch(deleteReview(review.id))} className='review-dropdown-link'>Delete</button>
+                                                    </div>
+                                                </div> : ""
+                                            }
+
+                                        </div>
+
+                                        <div>
+                                            <p className="review-description">{review.body}</p>
+                                            <p><span className="review-date">Date of visit: </span>{review.visit_date}</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                
                             </div>
-                            
-                <div className='review-dropdown-links'>
-                    <Link className='review-dropdown-link' to={`/spots/${review.reviewable_id}/reviews/${review.id}/edit`}>Edit review</Link>
-                    <button onClick={() => dispatch(deleteReview(review.id))} className='review-dropdown-link'>Delete</button>
-                </div>
-                        </div>
-                    )
-                }
+                        )
+                    }
+                    </div>
 
+                </div>
             </div>
         )
     }

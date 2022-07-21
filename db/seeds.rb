@@ -851,6 +851,116 @@ review5 = Review.create!({
     reviewable_type: canton_tower.class.to_s
 })
 
+# review 6
+review6 = Review.create!({
+    user_id: alec.id,
+    title: "AMAZING DON'T MISS",
+    body: "This place lives up to the amazing reviews. The food is great and the staff were so hard working, and wonderful. If you can wait for a table outside these are the best. A restaurant worth the hype.",
+    rating: 5,
+    visit_date: DateTime.new(2022, 4, 10),
+    reviewable_id: eight_am.id,
+    reviewable_type: eight_am.class.to_s
+})
+
+# review 7
+review7 = Review.create!({
+    user_id: wendy.id,
+    title: "Delicious breakfast",
+    body: "This isn't a huge place if we still managed to get a table quickly, but it did get busier. They have so much great food and the staff are great too. We had a lovely breakfast here.",
+    rating: 4,
+    visit_date: DateTime.new(2022, 6, 17),
+    reviewable_id: eight_am.id,
+    reviewable_type: eight_am.class.to_s
+})
+
+# review 8
+review8 = Review.create!({
+    user_id: charlie.id,
+    title: "Even better than in Greece",
+    body: "Had dinner there on a Sunday evening Pretty quiet - very nice barman (French ) with good wine recommendations Food was amazing - got certainly the best octopus of my life Please go to that place , you won't be disappointed",
+    rating: 5,
+    visit_date: DateTime.new(2022, 3, 9),
+    reviewable_id: kokkari_estiatorio.id,
+    reviewable_type: kokkari_estiatorio.class.to_s
+})
+
+# review 9
+review9 = Review.create!({
+    user_id: anthonie.id,
+    title: "Great location, clean and a great breakfast",
+    body: "We have stayed in Riu hotels before and this didn't disappoint. Great location, only a block away from the piers and 15 mins walk from the Alcatraz pier. Everything on hand, parking, shops, food and entertainment. Hotel was clean, breakfast is a busy buffet area, but great for a good start to the day",
+    rating: 4,
+    visit_date: DateTime.new(2022, 3, 12),
+    reviewable_id: riu_plaza.id,
+    reviewable_type: riu_plaza.class.to_s
+})
+
+# review 10
+review10 = Review.create!({
+    user_id: quang.id,
+    title: "Not what you'd expect",
+    body: "This is not a RIU worthy hotel. It's a cheap rip off to be honest. And last thing to say: riu bought the property from Sheraton. They didn't even bother to update some things, so if you’d look carefully: Sheraton logos are still everywhere.",
+    rating: 2,
+    visit_date: DateTime.new(2022, 4, 2),
+    reviewable_id: riu_plaza.id,
+    reviewable_type: riu_plaza.class.to_s
+})
+
+# review 11
+review11 = Review.create!({
+    user_id: peter.id,
+    title: "Lovely and comfortable",
+    body: "Excellent hotel! Highly recommend! The staff made us feel right at home. The hotel is charming , impeccably clean and really nicely located. We dined at the Blue Mermaid twice! Delicious meals! Ghirardelli's, trolley and Alcatraz all within walking distance!",
+    rating: 5,
+    visit_date: DateTime.new(2022, 6, 18),
+    reviewable_id: argonaut.id,
+    reviewable_type: argonaut.class.to_s
+})
+
+# review 12
+review12 = Review.create!({
+    user_id: jacob.id,
+    title: "So good we went twice",
+    body: "Tremendous variety, busy busy, great service. The custards are awesome. Custard buns!! Be adventurous! Most engaging waitstaff ever.",
+    rating: 4,
+    visit_date: DateTime.new(2022, 2, 1),
+    reviewable_id: dian_dou_de.id,
+    reviewable_type: dian_dou_de.class.to_s
+})
+
+# review 13
+review13 = Review.create!({
+    user_id: h.id,
+    title: "Excellent dim sum restaurant",
+    body: "I was there to see my friend in the beginning, but I am surprised that this hotel is not as old as I thought. Very nice view and great food provided. I love the atmosphere in the hotel, as well as the fountain in the lobby.",
+    rating: 5,
+    visit_date: DateTime.new(2022, 4, 29),
+    reviewable_id: white_swan.id,
+    reviewable_type: white_swan.class.to_s
+})
+
+# review 14
+review14 = Review.create!({
+    user_id: danny.id,
+    title: "Beautiful hotel with top service and location.",
+    body: "This is classic hotel on the historic Shamian island in Guangzhou's Yuexiu district. The 'island' is actually a tip of land at a 'Y' intersection of the famous Pearl river made an island in the past by digging a man made canal to separate it from the 'mainland'.",
+    rating: 4,
+    visit_date: DateTime.new(2022, 4, 29),
+    reviewable_id: white_swan.id,
+    reviewable_type: white_swan.class.to_s
+})
+
+# review 15
+review15 = Review.create!({
+    user_id: alex.id,
+    title: "Spectacular sight.",
+    body: "Unforgettable, unbelievable, and iconic. You won't soon forget the centerpiece of Guangzhou's spectacular skyline.",
+    rating: 4,
+    visit_date: DateTime.new(2022, 5, 3),
+    reviewable_id: canton_tower.id,
+    reviewable_type: canton_tower.class.to_s
+})
+
 # san_francisco.photo.attach(io: open('https://active-storage-tripaide.s3.us-west-1.amazonaws.com/san-francisco.jpeg'), filename: 'san-francisco.jpeg')
 # san_diego.photo.attach(io: open('https://active-storage-tripaide.s3.us-west-1.amazonaws.com/san-diego.jpeg'), filename: 'san-diego.jpeg')
 # guangzhou.photo.attach(io: open('https://active-storage-tripaide.s3.us-west-1.amazonaws.com/guangzhou.jpeg'), filename: 'guangzhou.jpeg')
