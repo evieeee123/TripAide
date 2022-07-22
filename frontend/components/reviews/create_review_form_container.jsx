@@ -10,22 +10,19 @@ import CreateReviewForm from './create_review_form'
 const mSTP = (state, ownProps) => {
     // debugger
     let place;
-    let placeType;
+    let placeType = ownProps.match.params.placeType;
     let placeId;
-    if (state.entities.spots !== {}){
+    if (placeType === "spots"){
         place = "spot";
-        placeType = "spots";
         placeId = "spotId";
-    } else if (state.entities.hotels !== {}) {
+    } else if (placeType === "hotels") {
         place = "hotel";
-        placeType = "hotels";
         placeId = "hotelId";
-    } else if (state.entities.restaurants !== {}) {
+    } else if (placeType === "restaurants") {
         place = "restaurant";
-        placeType = "restaurants";
         placeId = "restaurantId";
     }
-    debugger
+    // debugger
     
     return {
         currentUser: state.entities.users[state.session.id],
@@ -40,7 +37,7 @@ const mSTP = (state, ownProps) => {
         user_id: state.session.id,
         place: place,
         placeType: placeType,
-        placeId: placeId
+        placeId: ownProps.match.params.placeId
     }
 }
 

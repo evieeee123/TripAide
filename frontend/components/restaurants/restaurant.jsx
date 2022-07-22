@@ -12,10 +12,14 @@ class Restaurant extends React.Component{
         this.props.fetchRestaurant(this.props.match.params.restaurantId)
     }
 
+    componentWillUnmount(){
+        this.props.clearReviews()
+    }
+
     render(){
         const {restaurant, reviews, currentUser, places, clearReviews} = this.props;
         if (!restaurant) return null;
-        if (reviews.length === 0) return null;
+        // if (reviews.length === 0) return null;
 
         return (
             <div className="restaurant-show-page">

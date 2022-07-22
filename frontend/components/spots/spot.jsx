@@ -11,13 +11,20 @@ class Spot extends React.Component {
 
     componentDidMount(){
         this.props.fetchSpot(this.props.match.params.spotId)
+        // if clearreview in componentdidmount, it will clear all things when user go into spot show page
+        // this.props.clearReviews()
         // this.props.fetchReview(this.props.match.params.reviewId)
+    }
+
+    componentWillUnmount() {
+        // clear review when user leave the page
+        this.props.clearReviews()
     }
 
     render() {
         const {spot, reviews, currentUser, places, clearReviews} = this.props;
         if (!spot) return null;
-        if (reviews.length === 0) return null;
+        // if (reviews.length === 0) return null;
 
         let rate;
         let sum = 0;

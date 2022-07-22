@@ -33,6 +33,7 @@ class CreateReviewForm extends React.Component {
 
     componentDidMount() {
         this.props.clearReviewErrors();
+        // debugger
         if (this.props.place === "spot") {
             // can't use spotId because of the Route
             this.props.fetchSpot(this.props.match.params.placeId);
@@ -46,8 +47,8 @@ class CreateReviewForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.createReview(this.state)
-        .then(() => this.props.history.push(`/${this.props.placeType}/${this.props.place.id}`))
-        debugger
+            .then(() => this.props.history.push(`/${this.props.placeType}/${this.props.placeId}`))
+        // debugger
         // console.log(this.props.placeType)
     }
 

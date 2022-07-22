@@ -46,84 +46,7 @@ class Search extends React.Component{
             <div>
 
                 <div className="search-dropdown">
-                    <div className="search-box-content">
-                        //spot
-                        <hr />
-                        {
-                            Object.values(spots).map(spot => {
-                                if(spot.name.toLowerCase().startsWith(this.state.search.toLowerCase())){
-                                    return (
-                                        <div key={spot.id} className="each-place-search">
-                                            <li onClick={() => this.goSpot(spot.id)}>
-                                                <div><MdShareLocation className="search-location-icon" /></div>
-                                                <div className="search-place-info">
-                                                    <h2>{spot.name}</h2>
-                                                    <p>{spot.spot_type}</p>
-                                                </div>
-                                            </li>
-                                            <hr />
-                                        </div>
-                                    )
-                                }
-                            })
-                        }
-                        //restaurant
-                        {
-                            Object.values(restaurants).map(restaurant => {
-                                if (restaurant.name.toLowerCase().startsWith(this.state.search.toLowerCase())) {
-                                    return (
-                                        <div key={restaurant.id} className="each-place-search">
-                                            <li onClick={() => this.goRestaurant(restaurant.id)}>
-                                                <div><MdShareLocation className="search-location-icon" /></div>
-                                                <div className="search-place-info">
-                                                    <h2>{restaurant.name}</h2>
-                                                    <p>{restaurant.cuisines}</p>
-                                                </div>
-                                            </li>
-                                            <hr />
-                                        </div>
-                                    )
-                                }
-                            })
-                        }
-                        //hotel
-                        {
-                            Object.values(hotels).map(hotel => {
-                                if (hotel.name.toLowerCase().startsWith(this.state.search.toLowerCase())) {
-                                    return (
-                                        <div key={hotel.id} className="each-place-search">
-                                            <li onClick={() => this.goHotel(hotel.id)}>
-                                                <div><MdShareLocation className="search-location-icon" /></div>
-                                                <div className="search-place-info">
-                                                    <h2>{hotel.name}</h2>
-                                                    <p>{hotel.phonenum}</p>
-                                                </div>
-                                            </li>
-                                            <hr />
-                                        </div>
-                                    )
-                                }
-                            })
-                        }
-                        //city
-                        {
-                            Object.values(cities).map(city => {
-                                if (city.name.toLowerCase().startsWith(this.state.search.toLowerCase())) {
-                                    return (
-                                        <div key={city.id} className="each-place-search">
-                                            <li onClick={() => this.goCity(city.id)}>
-                                                <div><MdShareLocation className="search-location-icon" /></div>
-                                                <div className="search-place-info">
-                                                    <h2>{city.name}</h2>
-                                                </div>
-                                            </li>
-                                            <hr />
-                                        </div>
-                                    )
-                                }
-                            })
-                        }
-                    </div>
+
 
                 <div className="search-container">
                     <img src={window.background} alt="bg" className="search-bg" />
@@ -137,6 +60,87 @@ class Search extends React.Component{
                             placeholder="Where to?" 
                             onChange={this.handleSearch} 
                         />
+                            <div className="search-box-content">
+
+                                <hr />
+
+                                {/* <div className="place-catg">CITY</div>  */}
+                                {
+                                    cities.map(city => {
+                                        if (city.name.toLowerCase().startsWith(this.state.search.toLowerCase())) {
+                                            return (
+                                                <div key={city.id} className="each-place-search">
+                                                    <li onClick={() => this.goCity(city.id)}>
+                                                        <div><MdShareLocation className="search-location-icon" /></div>
+                                                        <div className="search-place-info">
+                                                            <h2>{city.name}</h2>
+                                                        </div>
+                                                    </li>
+                                                    <hr />
+                                                </div>
+                                            )
+                                        }
+                                    })
+                                }
+                        {/* //spot */}
+                                {
+                                    spots.map(spot => {
+                                        if (spot.name.toLowerCase().startsWith(this.state.search.toLowerCase())) {
+                                            return (
+                                                <div key={spot.id} className="each-place-search">
+                                                    <li onClick={() => this.goSpot(spot.id)}>
+                                                        <div><MdShareLocation className="search-location-icon" /></div>
+                                                        <div className="search-place-info">
+                                                            <h2>{spot.name}</h2>
+                                                            <p>{spot.spot_type}</p>
+                                                        </div>
+                                                    </li>
+                                                    <hr />
+                                                </div>
+                                            )
+                                        }
+                                    })
+                                }
+                        {/* //restaurant */}
+                                {
+                                    restaurants.map(restaurant => {
+                                        if (restaurant.name.toLowerCase().startsWith(this.state.search.toLowerCase())) {
+                                            return (
+                                                <div key={restaurant.id} className="each-place-search">
+                                                    <li onClick={() => this.goRestaurant(restaurant.id)}>
+                                                        <div><MdShareLocation className="search-location-icon" /></div>
+                                                        <div className="search-place-info">
+                                                            <h2>{restaurant.name}</h2>
+                                                            <p>{restaurant.cuisines}</p>
+                                                        </div>
+                                                    </li>
+                                                    <hr />
+                                                </div>
+                                            )
+                                        }
+                                    })
+                                }
+                        {/* //hotel */}
+                                {
+                                    hotels.map(hotel => {
+                                        if (hotel.name.toLowerCase().startsWith(this.state.search.toLowerCase())) {
+                                            return (
+                                                <div key={hotel.id} className="each-place-search">
+                                                    <li onClick={() => this.goHotel(hotel.id)}>
+                                                        <div><MdShareLocation className="search-location-icon" /></div>
+                                                        <div className="search-place-info">
+                                                            <h2>{hotel.name}</h2>
+                                                            <p>from {hotel.phonenum}/night</p>
+                                                        </div>
+                                                    </li>
+                                                    <hr />
+                                                </div>
+                                            )
+                                        }
+                                    })
+                                }
+
+                            </div>
                     </div>
                 </div>
                 </div>

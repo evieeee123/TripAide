@@ -17,11 +17,11 @@ const reviewReducer = (state = {}, action) => {
             delete nextState[action.reviewId]
             return nextState;
         case RECEIVE_SPOT:
-            return action.payload.reviews;
+            return action.payload.reviews ? action.payload.reviews : {};
         case RECEIVE_RESTAURANT:
-            return action.payloadRestaurant.reviews;
+            return action.payloadRestaurant.reviews ? action.payloadRestaurant.reviews : {};
         case RECEIVE_HOTEL:
-            return action.payloadHotel.reviews;
+            return action.payloadHotel.reviews ? action.payloadHotel.reviews : {};
         case CLEAR_REVIEWS:
             return {};
         default:

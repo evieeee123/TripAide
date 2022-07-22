@@ -9,16 +9,17 @@ import { fetchCities } from "../../actions/city_actions";
 
 
 const mSTP = state => ({
-    spots: state.entities.spots,
-    restaurants: state.entities.restaurants,
-    hotels: state.entities.hotels,
-    cities: state.entities.cities,
+    spots: Object.values(state.entities.spots),
+    restaurants: Object.values(state.entities.restaurants),
+    hotels: Object.values(state.entities.hotels),
+    cities: Object.values(state.entities.cities),
 })
 
 const mDTP = dispatch => ({
     fetchSpots: (cityId) => dispatch(fetchSpots(cityId)),
     fetchRestaurants: (cityId) => dispatch(fetchRestaurants(cityId)),
     fetchHotels: (cityId) => dispatch(fetchHotels(cityId)),
+    
     fetchCities: () => dispatch(fetchCities()),
 })
 

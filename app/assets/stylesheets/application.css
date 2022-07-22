@@ -147,7 +147,7 @@ nav {
 /* search bar */
 .search-container{
     position: relative;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .search-bar{
@@ -213,9 +213,14 @@ nav {
     overflow: auto;
     max-height: 500px;
     border-radius: 0px 0px 20px 20px;
+    /* position: sticky; */
 }
 
-.search-dropdown:hover .search-box-content{
+/* .search-dropdown:hover .search-box-content{
+    display: block;
+} */
+
+.search-bar:hover .search-box-content {
     display: block;
 }
 
@@ -254,11 +259,15 @@ nav {
     color: rgb(182, 182, 182);
 }
 
-
 hr{
     margin: 0;
     padding: 0;
     color: lightgray;
+}
+
+.place-catg{
+    padding: 10px 20px 10px;
+    font-size: 20px;
 }
 
 /* dream your trip */

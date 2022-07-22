@@ -1,7 +1,8 @@
 import { connect } from "react-redux";
 import { fetchHotel } from "../../actions/hotel_actions";
 import Hotel from "./hotel";
-import { fetchReview } from "../../actions/review_actions";
+import { fetchReview, clearReviews } from "../../actions/review_actions";
+
 
 const mSTP = (state, ownProps) => ({
     hotel: state.entities.hotels[ownProps.match.params.hotelId],
@@ -13,6 +14,7 @@ const mSTP = (state, ownProps) => ({
 const mDTP = (dispatch) => ({
     fetchReview: (reviewId) => dispatch(fetchReview(reviewId)),
     fetchHotel: (hotelId) => dispatch(fetchHotel(hotelId)),
+    clearReviews: () => dispatch(clearReviews())
 });
 
 export default connect(mSTP, mDTP)(Hotel)

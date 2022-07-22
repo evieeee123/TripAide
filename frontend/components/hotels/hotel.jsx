@@ -11,10 +11,14 @@ class Hotel extends React.Component {
         this.props.fetchHotel(this.props.match.params.hotelId)
     }
 
+    componentWillUnmount() {
+        this.props.clearReviews()
+    }
+
     render() {
         const { hotel, reviews, currentUser, places } = this.props;
         if (!hotel) return null;
-        if (reviews.length === 0) return null;
+        // if (reviews.length === 0) return null;
 
 
         return (

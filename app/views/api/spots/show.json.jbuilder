@@ -11,3 +11,11 @@ json.reviews do
         end
     end
 end
+
+# sum = 0
+# total = reviews.length
+# spot.reviews.each do |review|
+#     sum += review.rating
+# end
+# avgrating = sum / total
+# json.rating avgrating
