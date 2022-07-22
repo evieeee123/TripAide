@@ -35,7 +35,7 @@ class Review extends React.Component {
 
     render(){
         console.log(this.props)
-        const {reviews, spot} = this.props;
+        const {reviews, spot, places} = this.props;
         // if (reviews.length === 0) return null;
 
         return (
@@ -69,7 +69,7 @@ class Review extends React.Component {
                                                         more_vert
                                                     </span>
                                                     <div className='review-dropdown-box'>
-                                                        <button className='review-dropdown-edit'><Link to={`/spots/${review.reviewable_id}/reviews/${review.id}/edit`}>Edit review</Link></button>
+                                                        <button className='review-dropdown-edit'><Link to={`/${places}/${review.reviewable_id}/reviews/${review.id}/edit`}>Edit review</Link></button>
                                                         <button onClick={() => dispatch(deleteReview(review.id))} className='review-dropdown-link'>Delete</button>
                                                     </div>
                                                 </div> : ""

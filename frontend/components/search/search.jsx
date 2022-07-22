@@ -7,7 +7,8 @@ class Search extends React.Component{
         super(props)
 
         this.state = {
-            search: ""
+            search: "",
+            // visible: "show"
         }
 
         this.goSpot = this.goSpot.bind(this);
@@ -15,6 +16,7 @@ class Search extends React.Component{
         this.goHotel = this.goHotel.bind(this);
         this.goCity = this.goCity.bind(this);
         this.handleSearch = this.handleSearch.bind(this);
+        // this.handleShow = this.handleShow.bind(this);
     }
 
     goSpot(id){
@@ -38,6 +40,10 @@ class Search extends React.Component{
         this.setState({ search: e.target.value })
     }
 
+    // handleShow(){
+    //     this.setState({ visible: "show" })
+    // }
+
     render(){
         const {spots, hotels, restaurants, cities} = this.props;
         if (!spots || !hotels || !restaurants || !cities) return null;
@@ -51,19 +57,22 @@ class Search extends React.Component{
                 <div className="search-container">
                     <img src={window.background} alt="bg" className="search-bg" />
                         <div className="search-bar">
-                        <div >
-                                <CgSearch className="search-icon" />
-                        </div>
-                        <input 
-                            type="text" 
-                            className="searchtext" 
-                            placeholder="Where to?" 
-                            onChange={this.handleSearch} 
-                        />
+                            <div className="searchbar-ele">
+                            <div className="icon">
+                                    <CgSearch className="search-icon" />
+                            </div>
+                            <input 
+                                type="text" 
+                                className="searchtext" 
+                                placeholder="Where to?" 
+                                onChange={this.handleSearch} 
+                                // onClick={this.handleShow}
+                            />
+                            </div>
+
                             <div className="search-box-content">
 
-                                <hr />
-
+                                {/* <hr /> */}
                                 {/* <div className="place-catg">CITY</div>  */}
                                 {
                                     cities.map(city => {

@@ -26,20 +26,23 @@ class Spot extends React.Component {
         if (!spot) return null;
         // if (reviews.length === 0) return null;
 
-        let rate;
-        let sum = 0;
-        reviews.map(review => sum += review.rating);
-        rate = Math.round(sum/reviews.length)
+        // let rate;
+        // let sum = 0;
+        // reviews.map(review => sum += review.rating);
+        // rate = Math.round(sum/reviews.length)
 // debugger
         return (
             <div className="spot-show-page">
                 <div className="spot-show-title">{spot.name}</div>
 
-                <div><Rating rate={rate}/></div>
+                <div className="header-rating">
+                    <Rating rate={spot.rating} />  
+                    <span className="rating-num">{reviews.length}</span>
+                    <ul className="spot-type">
+                        <li>| {spot.spot_type}</li>
+                    </ul>
+                </div>
 
-                <ul className="spot-type">
-                    <li>{spot.spot_type}</li>
-                </ul>
 
                 <div className="spot-show-info">
                     <div className="spot-about-box">

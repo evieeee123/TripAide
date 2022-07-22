@@ -51,8 +51,8 @@ class HomePage extends React.Component {
                         {
                             cities.map(city =>
                                 <div key={city.id} className="container">
-                                    {/* <Link to={`/cities/${city.id}`}><img src={city.photoUrl} className="homepage-img" /></Link> */}
-                                    <Link to={`/cities/${city.id}`}><img src={window.trip} alt="trip" className="homepage-img" /></Link>
+                                    <Link to={`/cities/${city.id}`}><img src={city.photoUrl} className="homepage-img" /></Link>
+                                    {/* <Link to={`/cities/${city.id}`}><img src={window.trip} alt="trip" className="homepage-img" /></Link> */}
                                     <div className="bottom-left">{city.name}</div>
                                 </div>
                             )

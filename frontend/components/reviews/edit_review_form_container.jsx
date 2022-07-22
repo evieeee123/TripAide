@@ -9,22 +9,19 @@ import EditReviewForm from './edit_review_form'
 
 const mSTP = (state, ownProps) => {
     let place;
-    let placeType;
+    let placeType = ownProps.match.params.placeType;
     let placeId;
-    if (state.entities.spots !== undefined) {
+    if (placeType === "spots") {
         place = "spot";
-        placeType = "spots";
         placeId = "spotId";
-    } else if (state.entities.hotels !== undefined) {
+    } else if (placeType === "hotels") {
         place = "hotel";
-        placeType = "hotels";
         placeId = "hotelId";
-    } else if (state.entities.restaurants !== undefined) {
+    } else if (placeType === "restaurants") {
         place = "restaurant";
-        placeType = "restaurants";
         placeId = "restaurantId";
     }
-
+// debugger
     return {
         currentUser: state.entities.users[state.session.id],
         // spot: state.entities.spots[ownProps.match.params.spotId],
@@ -38,7 +35,7 @@ const mSTP = (state, ownProps) => {
 
         place: place,
         placeType: placeType,
-        placeId: placeId
+        placeId: ownProps.match.params.placeId
     }
 }
 

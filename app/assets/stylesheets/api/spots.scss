@@ -74,12 +74,25 @@
 .spot-show-title{
     font-size: 50px;
     font-weight: bolder;
+    margin-bottom: 20px;
+}
+
+.header-rating{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     margin-bottom: 40px;
+}
+
+.rating-num{
+    margin-left: 10px;
+    font-size: 16px;
 }
 
 .spot-type{
     font-size: 15px;
-    margin-bottom: 40px;
+    margin-left: 20px;
+    font-size: 17px;
 }
 
 .spot-about-box{
@@ -120,4 +133,5 @@
     width: 100%;
     height: 100%;
     overflow: auto;
+    max-width: 740px;
 }

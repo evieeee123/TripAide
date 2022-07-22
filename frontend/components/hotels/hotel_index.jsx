@@ -16,23 +16,30 @@ class HotelIndex extends React.Component {
         const { hotels, city } = this.props;
         if (hotels.length === 0 || !city) return null;
         return (
-            <div>
-                <h1>Hotels in {city.name}</h1>
-                <Map spots={hotels} city={city} clearHotels={this.props.clearHotels} clearRestaurants={this.props.clearRestaurants} clearSpots={this.props.clearSpots} />
-                <ul>
-                    {
-                        hotels.map(hotel =>
+            <div className="spot-index-page">
+                <div className="spots-index-title">Hotels in {city.name}</div>
+                    <div className="spot-index-body">
+                    <div className="map">
+                            <Map spots={hotels} city={city} clearHotels={this.props.clearHotels} clearRestaurants={this.props.clearRestaurants} clearSpots={this.props.clearSpots} />
+                        </div>
+                    <ul>
+                        {
+                            hotels.map(hotel =>
 
-                            <div key={hotel.id}>
-                                <div><Link to={`/hotels/${hotel.id}`}>{hotel.name}</Link></div>
-                                <div>
-                                    <li>{hotel.phonenum}</li>
+                                <div key={hotel.id} className="single-spot">
+                                    <div><img src={window.trip} alt="trip" className="spot-index-img" /></div>
+                                    <div className="spot-index-info">
+                                        <div className="spot-index-name"><Link to={`/hotels/${hotel.id}`}>{hotel.name}</Link></div>
+                                        <div>
+                                            <li>{hotel.phonenum}</li>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
 
-                        )
-                    }
-                </ul>
+                            )
+                        }
+                    </ul>
+                </div>
             </div>
         )
     }

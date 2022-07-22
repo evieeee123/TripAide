@@ -174,16 +174,21 @@ input[type=date]{
     border: none;
 }
 
+.submit-review-button:hover{
+    background-color: rgb(53, 53, 53);
+    cursor: pointer;
+}
 
 // review
 
 .review-box {
     border: 1px solid lightgray;
     max-width: 1140px;
+    background-color: white;
 }
 
 .inner-review-box {
-    padding: 20px;
+    padding: 10px 30px;
 }
 
 .review-header {
@@ -211,6 +216,10 @@ input[type=date]{
     font-size: 20px;
     font-weight: bolder;
     border-radius: 3px;
+}
+
+.review-header-button:hover{
+    background-color: rgb(61, 61, 61);
 }
 
 .review-header-button a {

@@ -64,8 +64,9 @@ class CreateReviewForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.updateReview(this.state)
-            .then(() => this.props.history.push(`/${this.props.placeType}/${this.props.place.id}`))
+            .then(() => this.props.history.push(`/${this.props.placeType}/${this.props.placeId}`))
     }
+
 
     update(field) {
         if (field === 'rating') {
@@ -112,12 +113,12 @@ class CreateReviewForm extends React.Component {
                 <div className="revivew-form-left">
 
                     <div className="create-review">
-                        <p className="create-review-welcome">Edit your eview</p>
+                        <p className="create-review-welcome">Edit your review</p>
                     </div>
 
-                    <form>
+                    <form className="create-review-form">
                         <div className="form-error">{this.renderErrors()}</div>
-                        <div className="rating-title">Your overall rating of this restaurant</div>
+                        <div className="rating-title">Your overall rating of this place</div>
                         <div className="whole-rating">
                             <div className="form-rating">
                                 <label htmlFor="rating-1"><input id="rating-1" type="radio" value="1" name="rating" onChange={this.update("rating")} checked={parseInt(this.state.rating) === 1}  />

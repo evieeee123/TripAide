@@ -103,7 +103,7 @@ class CreateReviewForm extends React.Component {
 
                     <form className="create-review-form">
                         <div className="form-error">{this.renderErrors()}</div>
-                        <div className="rating-title">Your overall rating of this restaurant</div>
+                        <div className="rating-title">Your overall rating of this place</div>
                         <div className="whole-rating">
                             <div className="form-rating">
                                 <label htmlFor="rating-1"><input id="rating-1" type="radio" value="1" name="rating" onChange={this.update("rating")}/>

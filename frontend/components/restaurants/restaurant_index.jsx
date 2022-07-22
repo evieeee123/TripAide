@@ -16,24 +16,32 @@ class RestaurantIndex extends React.Component {
         const { restaurants, city } = this.props;
         if (restaurants.length === 0 || !city) return null;
         return (
-            <div>
-                <h1>Restaurants in {city.name}</h1>
-                <Map spots={restaurants} city={city} clearRestaurants={this.props.clearRestaurants} clearSpots={this.props.clearSpots} clearHotels={this.props.clearHotels} />
-                <ul>
-                    {
-                        restaurants.map(restaurant =>
+            <div className="spot-index-page">
+                <div className="spots-index-title">Restaurants in {city.name}</div>
+                <div className="spot-index-body">
+                    <div className="map">
+                        <Map spots={restaurants} city={city} clearRestaurants={this.props.clearRestaurants} clearSpots={this.props.clearSpots} clearHotels={this.props.clearHotels} />
+                    </div>
 
-                            <div key={restaurant.id}>
-                                <div><Link to={`/restaurants/${restaurant.id}`}>{restaurant.name}</Link></div>
-                                <div>
-                                    <li>{restaurant.cuisines}</li>
-                                    <li>{restaurant.price_range}</li>
+                    <ul>
+                        {
+                            restaurants.map(restaurant =>
+
+                                <div key={restaurant.id} className="single-spot">
+                                    <div><img src={window.trip} alt="trip" className="spot-index-img" /></div>
+                                    <div className="spot-index-info">
+                                        <div className="spot-index-name"><Link to={`/restaurants/${restaurant.id}`}>{restaurant.name}</Link></div>
+                                        <div>
+                                            <li>{restaurant.cuisines}</li>
+                                            <li>{restaurant.price_range}</li>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
 
-                        )
-                    }
-                </ul>
+                            )
+                        }
+                    </ul>
+                </div>
             </div>
         )
     }
