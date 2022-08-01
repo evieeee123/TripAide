@@ -87,6 +87,7 @@
 
 // do
 
+
 .do-part h3{
     font-size: 24px;
     font-weight: bolder;
@@ -110,7 +111,7 @@
     display: flex;
     flex-direction: column;
     width: 267px;
-    height: 267px;
+    height: 300px;
 }
 
 .single-spot-img {
@@ -165,6 +166,7 @@
     display: flex;
     flex-direction: row;
     margin-top: 35px;
+    max-height: 290px;
 }
 
 // .spots-box .spot-right-arrow{

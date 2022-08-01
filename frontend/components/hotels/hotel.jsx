@@ -6,6 +6,7 @@ import { BiBed } from "react-icons/bi";
 import { CgPlayButtonO } from "react-icons/cg";
 import { FaBath } from "react-icons/fa";
 import { GiKnifeFork } from "react-icons/gi";
+import Rating from "../rating/rating";
 
 
 
@@ -35,6 +36,9 @@ class Hotel extends React.Component {
 
                 <div className="spot-show-title">{hotel.name}</div>
                     
+                <div><Rating rate={hotel.rating} /></div>
+                
+
                 <ul className="hotel-location">
                     <span><MdLocationOn /></span>
                     <span>{hotel.address}</span>

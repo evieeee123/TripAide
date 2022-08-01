@@ -1,6 +1,9 @@
 import React from "react";
 import { clearReviews } from "../../actions/review_actions";
 import Review from "../reviews/review";
+import { MdLocationOn } from "react-icons/md";
+import { TbPhone } from "react-icons/tb";
+
 
 class Restaurant extends React.Component{
 
@@ -27,9 +30,14 @@ class Restaurant extends React.Component{
                 <div className="spot-show-title">{restaurant.name}</div>
                 <div>
                     <ul>
-                        <li>{restaurant.price_range} {restaurant.cuisines}</li>
-                        <li>{restaurant.res_address} {restaurant.phonenum}</li>
+                        <li>{restaurant.price_range}, {restaurant.cuisines}</li>
+                        <li>
+                            <span><MdLocationOn/>{restaurant.res_address} </span>
+                            |<span><TbPhone /> {restaurant.phonenum}</span>
+                        </li>
                     </ul>
+
+                    <img src={window.trip} alt="trip" className="hotel-pic"/>
 
                     <div>
                         <h2>Details</h2>

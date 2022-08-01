@@ -10,5 +10,15 @@ class Restaurant < ApplicationRecord
 
     has_many :reviews, :as => :reviewable
 
+    def avgrating
+        sum = 0
+        total = self.reviews.length
+        self.reviews.each do |review|
+            sum += review.rating
+        end
+        return 0 if total == 0 
+        sum / total
+    end
+
 
 end
