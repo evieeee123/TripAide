@@ -961,8 +961,8 @@ review15 = Review.create!({
     reviewable_type: canton_tower.class.to_s
 })
 
-san_francisco.photo.attach(io: open('https://active-storage-tripaide.s3.us-west-1.amazonaws.com/san-francisco.jpeg'), filename: 'san-francisco.jpeg')
-san_diego.photo.attach(io: open('https://active-storage-tripaide.s3.us-west-1.amazonaws.com/san-diego.jpeg'), filename: 'san-diego.jpeg')
-guangzhou.photo.attach(io: open('https://active-storage-tripaide.s3.us-west-1.amazonaws.com/guangzhou.jpeg'), filename: 'guangzhou.jpeg')
-seattle.photo.attach(io: open('https://active-storage-tripaide.s3.us-west-1.amazonaws.com/seattle.jpeg'), filename: 'seattle.jpeg')
-new_york_city.photo.attach(io: open('https://active-storage-tripaide.s3.us-west-1.amazonaws.com/new-york.jpeg'), filename: 'new-york.jpeg')
+san_francisco.photo.attach(io: open('https://active-storage-tripaide.s3.us-west-1.amazonaws.com/san-francisco.jpg'), filename: 'san-francisco.jpg')
+san_diego.photo.attach(io: open('https://active-storage-tripaide.s3.us-west-1.amazonaws.com/san-diego.jpg'), filename: 'san-diego.jpg')
+guangzhou.photo.attach(io: open('https://active-storage-tripaide.s3.us-west-1.amazonaws.com/guangzhou.jpg'), filename: 'guangzhou.jpg')
+seattle.photo.attach(io: open('https://active-storage-tripaide.s3.us-west-1.amazonaws.com/seattle.jpg'), filename: 'seattle.jpg')
+new_york_city.photo.attach(io: open('https://active-storage-tripaide.s3.us-west-1.amazonaws.com/new-york.jpg'), filename: 'new-york.jpg')
