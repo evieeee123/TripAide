@@ -32,3 +32,19 @@ local:
 #   service: Mirror
 #   primary: local
 #   mirrors: [ amazon, google, microsoft ]
+
+amazon_dev:
+  service: S3
+  access_key_id: <%= Rails.application.credentials.aws[AKIA6IWOGKUK7HHZD4M4] %>
+  secret_access_key:
+    <%= Rails.application.credentials.aws[nNIG60GRS3GObV6M/PYBfEfSHaGngdV9HUYVjYQ2] %>
+  region: <%= Rails.application.credentials.aws[US West (N. California) us-west-1] %>
+  bucket: <%= Rails.application.credentials.aws[:dev][active-storage-tripaide] %>
+
+amazon_prod:
+  service: S3
+  access_key_id: <%= Rails.application.credentials.aws[AKIA6IWOGKUK7HHZD4M4] %>
+  secret_access_key:
+    <%= Rails.application.credentials.aws[nNIG60GRS3GObV6M/PYBfEfSHaGngdV9HUYVjYQ2] %>
+  region: <%= Rails.application.credentials.aws[US West (N. California) us-west-1] %>
+  bucket: <%= Rails.application.credentials.aws[:prod][active-storage-tripaide-pro] %>
