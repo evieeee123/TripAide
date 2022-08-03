@@ -3,12 +3,19 @@
   <head>
   
     <title>Tripaide</title>
+
+    <%# <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"> %>
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon_io/favicon32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon_io/favicon16x16.png">
+    <%# <link rel="manifest" href="/site.webmanifest"> %>
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{ENV['MAPS_API_KEY']}" %>
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    
 
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
