@@ -20,5 +20,12 @@ class Restaurant < ApplicationRecord
         sum / total
     end
 
+    def review
+        res = []
+        self.reviews.each do |review|
+            res << review.body
+        end
+        res
+    end
 
 end

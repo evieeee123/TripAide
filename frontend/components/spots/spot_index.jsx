@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Map from "../maps/map";
+import Rating from "../rating/rating";
+
 
 class SpotIndex extends React.Component {
     constructor(props){
@@ -10,6 +12,15 @@ class SpotIndex extends React.Component {
     componentDidMount(){
         this.props.fetchSpots(this.props.match.params.cityId)
         this.props.fetchCity(this.props.match.params.cityId)
+    }
+
+    truncate(str, num) {
+        // debugger
+        if (str !== undefined) {
+            return str.split(" ").splice(0, num).join(" ");
+        } else {
+            return ""
+        }
     }
 
     render(){
@@ -32,7 +43,18 @@ class SpotIndex extends React.Component {
                                     <div className="spot-index-info">
                                         <div className="spot-index-name"><Link to={`/spots/${spot.id}`}>{spot.name}</Link></div>
                                         <div>{ spot.spot_type }</div>
+                                        <div><Rating rate={spot.rating} /></div>
+                                    {
+                                        (spot.review[0]) ?
+                                            <div><Link to={`/spots/${spot.id}`}> "{this.truncate(spot.review[0], 12)} ..." </Link></div> : ""
+                                    }
+                                    {
+                                        (spot.review[1]) ?
+                                            <div><Link to={`/spots/${spot.id}`}> "{this.truncate(spot.review[1], 12)} ..." </Link> </div> : ""
+                                    }
                                     </div>
+
+
                                 </div> 
 
                             )
@@ -46,4 +68,4 @@ class SpotIndex extends React.Component {
 
 }
 
-export default SpotIndex
+export default SpotIndex;

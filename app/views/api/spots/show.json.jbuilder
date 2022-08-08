@@ -1,6 +1,8 @@
 json.spot do 
     json.extract! @spot, :id, :city_id, :name, :spot_type, :description, :duration, :longtitude, :latitude
     json.rating @spot.avgrating
+    json.review @spot.review
+
 end
 
 json.reviews do 

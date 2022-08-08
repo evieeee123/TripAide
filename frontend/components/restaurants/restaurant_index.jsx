@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Map from "../maps/map";
+import Rating from "../rating/rating";
+
 
 class RestaurantIndex extends React.Component {
     constructor(props) {
@@ -10,6 +12,15 @@ class RestaurantIndex extends React.Component {
     componentDidMount() {
         this.props.fetchRestaurants(this.props.match.params.cityId)
         this.props.fetchCity(this.props.match.params.cityId)
+    }
+
+    truncate(str, num) {
+        // debugger
+        if (str !== undefined) {
+            return str.split(" ").splice(0, num).join(" ");
+        } else {
+            return ""
+        }
     }
 
     render() {
@@ -34,7 +45,18 @@ class RestaurantIndex extends React.Component {
                                         <div>
                                             <li>{restaurant.cuisines}</li>
                                             <li>{restaurant.price_range}</li>
+                                            <li><Rating rate={restaurant.rating} /></li>
                                         </div>
+
+                                        {
+                                            (restaurant.review[0]) ?
+                                                <div><Link to={`/restaurants/${restaurant.id}`}> "{this.truncate(restaurant.review[0], 12)} ..." </Link></div> : ""
+                                        }
+                                        {
+                                            (restaurant.review[1]) ?
+                                                <div><Link to={`/restaurants/${restaurant.id}`}> "{this.truncate(restaurant.review[1], 12)} ..." </Link> </div> : ""
+                                        }
+
                                     </div>
                                 </div>
 
