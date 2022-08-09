@@ -15,6 +15,7 @@ import HotelContainer from "./hotels/hotel_container";
 import HotelIndexContainer from "./hotels/hotel_index_container";
 import CreateReviewContainer from "./reviews/create_review_form_container";
 import EditReviewContainer from "./reviews/edit_review_form_container";
+import Footer from "./footer/footer";
 
 
 const App = () => (
@@ -44,6 +45,10 @@ const App = () => (
             <Route path="/hotels/:hotelId" component={HotelContainer} />
             <Route path="/" component={HomePageConatiner} />
         </Switch>
+
+        <footer>
+            <Footer/>
+        </footer>
     </div>
 );
 
