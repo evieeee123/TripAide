@@ -464,4 +464,22 @@ footer {
     margin-top: 20px;
 }
 
+.footer-linkedin{
+    color: black;
+    font-size: 31px;
+}
+
+.footer-linkedin:hover{
+    color: rgb(134, 134, 134);
+}
+
+.footer-github{
+    color: black;
+    font-size: 25px;
+}
+
+.footer-github:hover {
+    color: rgb(134, 134, 134);
+}
+
 

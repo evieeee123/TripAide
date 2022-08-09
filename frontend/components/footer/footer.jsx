@@ -37,9 +37,9 @@ class Footer extends React.Component{
                         <span><a href="https://meal-in.herokuapp.com/#/" target="_blank" rel="noopener noreferrer">Meal'in</a></span>
                     </div>
                     <div className="footer-social-icon">
-                        <span><a href="https://www.linkedin.com/in/evie-zeng-863a3622a/" target="_blank" rel="noopener noreferrer"><IoLogoLinkedin style={{ fontSize: "31px", color: "black" }}/></a></span>
-                        <span><a href="https://github.com/evieeee123" target="_blank" rel="noopener noreferrer"><ImGithub style={{ fontSize: "25px", color:"black" }}/></a></span>
-                        <span><a href="https://angel.co/u/evie-zeng" target="_blank" rel="noopener noreferrer"><FaAngellist style={{ fontSize: "25px", color: "black"  }}/></a></span>
+                        <span><a href="https://www.linkedin.com/in/evie-zeng-863a3622a/" target="_blank" rel="noopener noreferrer"><IoLogoLinkedin className="footer-linkedin" /></a></span>
+                        <span><a href="https://github.com/evieeee123" target="_blank" rel="noopener noreferrer"><ImGithub className="footer-github" /></a></span>
+                        <span><a href="https://angel.co/u/evie-zeng" target="_blank" rel="noopener noreferrer"><FaAngellist className="footer-github"/></a></span>
                     </div>
                 </div>
             </div>
