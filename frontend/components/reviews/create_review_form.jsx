@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import React from "react";
 import { BsCircleFill } from "react-icons/bs";
+import { FaCircle } from "react-icons/fa";
+import { FaRegCircle } from "react-icons/fa";
 
 
 class CreateReviewForm extends React.Component {
@@ -25,7 +27,8 @@ class CreateReviewForm extends React.Component {
             rating: 0,
             title: "",
             body: "",
-            visit_date: new Date().toLocaleDateString()
+            visit_date: ""
+            // visit_date: new Date().toLocaleDateString()
         };
         this.handleSubmit = this.handleSubmit.bind(this)
         // console.log(this.props)

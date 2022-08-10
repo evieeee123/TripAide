@@ -61,7 +61,7 @@ class City extends React.Component {
                                             <Link to={`/spots/${spot.id}`}><img src={window.trip} alt="trip" className="single-spot-img" /></Link>
                                             <div className="spots-box-info">
                                                 <Link to={`/spots/${spot.id}`} className="spot-box-name"><span >{spot.name}</span></Link>
-                                                <span><Rating rate={spot.rating} /></span>
+                                                <span className="citypage-rate"><Rating rate={spot.rating} /></span>
                                                
                                                 <span className="spot-box-type">{spot.spot_type}</span>
                                             </div>
@@ -88,7 +88,7 @@ class City extends React.Component {
                                             <Link to={`/hotels/${hotel.id}`}><img src={window.trip} alt="trip" className="single-spot-img" /></Link>
                                             <div className="spots-box-info">
                                                 <Link to={`/hotels/${hotel.id}`} className="spot-box-name"><span >{hotel.name}</span></Link>
-                                                <span><Rating rate={hotel.rating} /></span>
+                                                <span className="citypage-rate"><Rating rate={hotel.rating} /></span>
                                                 <span className="spot-box-type">from {hotel.phonenum}/nignt</span>
                                             </div>
                                         </div>
@@ -114,7 +114,7 @@ class City extends React.Component {
                                             <Link to={`/restaurants/${restaurant.id}`}><img src={window.trip} alt="trip" className="single-spot-img" /></Link>
                                             <div className="spots-box-info">
                                                 <Link to={`/restaurants/${restaurant.id}`} className="spot-box-name"><span >{restaurant.name}</span></Link>
-                                                <span><Rating rate={restaurant.rating} /></span>
+                                                <span className="citypage-rate"><Rating rate={restaurant.rating} /></span>
 
                                                 <span className="spot-box-type">{restaurant.price_range} &#183; {restaurant.special_diets} </span>
                                             </div>

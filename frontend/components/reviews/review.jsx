@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { deleteReview } from "../../actions/review_actions";
 import ReviewItem from "./review_item"
 import { clearReviews } from "../../actions/review_actions";
+import Rating from "../rating/rating";
 
 class Review extends React.Component {
     constructor(props){
@@ -59,7 +60,7 @@ class Review extends React.Component {
                                     <div className="r-bar">
                                         <div className="review-title-bar">
                                             <div>
-                                                <div><ReviewItem rating={review.rating}/></div>
+                                                <div><Rating rate={review.rating}/></div>
                                                 <p className="single-review-title">{review.title}</p>
                                             </div>
 

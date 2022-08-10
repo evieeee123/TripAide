@@ -30,6 +30,15 @@
     border: 3px solid #00aa6c;
     border-radius: 50px;
     margin: 1.5px;
+    background-color: #00aa6c;
+}
+
+.rate-cir{
+    color: #00aa6c;
+}
+
+.rate-cir svg{
+    margin-right: 1px;
 }
 
 #rating-1{
@@ -57,9 +66,11 @@
     color: #00aa6c;
     text-decoration: none;
     padding: 0px;
+    background-color: #00aa6c;
     // border: 3px solid #00aa6c;
     border-radius: 50px;
-    margin: 3px;
+    cursor: pointer;
+    // margin: 3px;
 }
 
 .create-review-welcome{
