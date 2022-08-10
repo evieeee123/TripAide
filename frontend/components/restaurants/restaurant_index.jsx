@@ -12,6 +12,7 @@ class RestaurantIndex extends React.Component {
     componentDidMount() {
         this.props.fetchRestaurants(this.props.match.params.cityId)
         this.props.fetchCity(this.props.match.params.cityId)
+        window.scrollTo(0, 0)
     }
 
     truncate(str, num) {
@@ -39,7 +40,7 @@ class RestaurantIndex extends React.Component {
                             restaurants.map(restaurant =>
 
                                 <div key={restaurant.id} className="single-spot">
-                                    <div><img src={window.trip} alt="trip" className="spot-index-img" /></div>
+                                    <div><img src={restaurant.image_url} alt="trip" className="spot-index-img" /></div>
                                     <div className="spot-index-info">
                                         <div className="spot-index-name"><Link to={`/restaurants/${restaurant.id}`}>{restaurant.name}</Link></div>
                                         <div>

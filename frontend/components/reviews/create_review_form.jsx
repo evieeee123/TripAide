@@ -45,6 +45,7 @@ class CreateReviewForm extends React.Component {
         } else if (this.props.place === "restaurant") {
             this.props.fetchRestaurant(this.props.match.params.placeId);
         }
+        window.scrollTo(0, 0)
     };
 
     handleSubmit(e) {

@@ -13,6 +13,7 @@ class Restaurant extends React.Component{
 
     componentDidMount(){
         this.props.fetchRestaurant(this.props.match.params.restaurantId)
+        window.scrollTo(0, 0)
     }
 
     componentWillUnmount(){
@@ -37,7 +38,7 @@ class Restaurant extends React.Component{
                         </li>
                     </ul>
 
-                    <img src={window.trip} alt="trip" className="hotel-pic"/>
+                    <img src={restaurant.image_url} alt="trip" className="hotel-pic"/>
 
                     <div>
                         <h2>Details</h2>

@@ -16,6 +16,7 @@ class City extends React.Component {
         this.props.fetchSpots(this.props.match.params.cityId);
         this.props.fetchHotels(this.props.match.params.cityId);
         this.props.fetchRestaurants(this.props.match.params.cityId);
+        window.scrollTo(0, 0)
     }
 
     render(){
@@ -24,14 +25,14 @@ class City extends React.Component {
         return (
             <div className="city-page">
                 <div className="city-title">
-                    <span>Explore </span><span className="city-name"> {city.name}</span>
+                    <span>Explore </span><span className="city-name"> {city.name} </span>
                 </div>
 
                 <div className="city-img-box">
-                    <div className="city-img-left"><img src={window.trip} alt="trip" className="city-img-1" /></div>
+                    <div className="city-img-left"><img src={city.image_url_1} alt="trip" className="city-img-1" /></div>
                     <div className="city-img-right">
-                        <img src={window.trip} alt="trip" className="city-img-2" />
-                        <img src={window.trip} alt="trip" className="city-img-2" />
+                        <img src={city.image_url_2} alt="trip" className="city-img-2" />
+                        <img src={city.image_url_3} alt="trip" className="city-img-2" />
                     </div>
                 </div>
 
@@ -58,7 +59,8 @@ class City extends React.Component {
                                 {
                                     spots.map(spot =>
                                         <div key={spot.id} className="spots-img-box">
-                                            <Link to={`/spots/${spot.id}`}><img src={window.trip} alt="trip" className="single-spot-img" /></Link>
+                                            {/* <Link to={`/spots/${spot.id}`}><img src={window.trip} alt="trip" className="single-spot-img" /></Link> */}
+                                            <Link to={`/spots/${spot.id}`}><img src={spot.image_url} alt="trip" className="single-spot-img" /></Link>
                                             <div className="spots-box-info">
                                                 <Link to={`/spots/${spot.id}`} className="spot-box-name"><span >{spot.name}</span></Link>
                                                 <span className="citypage-rate"><Rating rate={spot.rating} /></span>
@@ -85,7 +87,7 @@ class City extends React.Component {
                                 {
                                     hotels.map(hotel =>
                                         <div key={hotel.id} className="spots-img-box">
-                                            <Link to={`/hotels/${hotel.id}`}><img src={window.trip} alt="trip" className="single-spot-img" /></Link>
+                                            <Link to={`/hotels/${hotel.id}`}><img src={hotel.image_url} alt="trip" className="single-spot-img" /></Link>
                                             <div className="spots-box-info">
                                                 <Link to={`/hotels/${hotel.id}`} className="spot-box-name"><span >{hotel.name}</span></Link>
                                                 <span className="citypage-rate"><Rating rate={hotel.rating} /></span>
@@ -111,7 +113,7 @@ class City extends React.Component {
                                 {
                                     restaurants.map(restaurant =>
                                         <div key={restaurant.id} className="spots-img-box">
-                                            <Link to={`/restaurants/${restaurant.id}`}><img src={window.trip} alt="trip" className="single-spot-img" /></Link>
+                                            <Link to={`/restaurants/${restaurant.id}`}><img src={restaurant.image_url} alt="trip" className="single-spot-img" /></Link>
                                             <div className="spots-box-info">
                                                 <Link to={`/restaurants/${restaurant.id}`} className="spot-box-name"><span >{restaurant.name}</span></Link>
                                                 <span className="citypage-rate"><Rating rate={restaurant.rating} /></span>

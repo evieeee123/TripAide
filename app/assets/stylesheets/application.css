@@ -27,7 +27,8 @@
     display: flex;
     flex-direction: row;
     background-color: none;
-    cursor: pointer;
+    cursor: not-allowed;
+    padding: 7px 5px 7px
 }
 
 .review-button p{
@@ -36,10 +37,31 @@
     font-weight: bolder;
 }
 
+.review-button .review-button-hover{
+    visibility: hidden;
+    position: absolute;
+    z-index: 1;
+}
+
+.review-button:hover .review-button-hover {
+    visibility: visible;
+    min-width: 210px;
+    background-color: gold;
+    margin-top: 8px;
+    border-radius: 10px;
+    padding: 10px 5px 10px;
+    text-align: center;
+    margin-left: -80px;
+    top: 90%;
+    box-shadow: 5px 5px 8px -3px #bbbbbb;;
+}
+
 .review-button:hover{
     background-color: rgb(237, 237, 237);
-    padding: 7px 0px 7px;
+    padding: 7px 5px 7px;
     border-radius: 23px;
+    position: relative;
+    /* display: inline-block; */
 }
 
 /* signup & login button */
@@ -133,7 +155,7 @@ nav {
     /* padding-right: 180px; */
     border-radius: 15px;
     font-size: 20px;
-    cursor: pointer;
+    cursor: not-allowed;
     font-weight: bold;
     width: 270px;
     display: flex;
@@ -357,6 +379,8 @@ hr{
     left: 13px;
     font-size: 30px;
     font-weight: bolder;
+    text-align: left;
+    max-width: 255px;
 }
 
 

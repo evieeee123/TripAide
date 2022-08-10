@@ -12,6 +12,7 @@ class SpotIndex extends React.Component {
     componentDidMount(){
         this.props.fetchSpots(this.props.match.params.cityId)
         this.props.fetchCity(this.props.match.params.cityId)
+        window.scrollTo(0, 0)
     }
 
     truncate(str, num) {
@@ -39,7 +40,7 @@ class SpotIndex extends React.Component {
                             spots.map(spot => 
 
                                 <div key={spot.id} className="single-spot">
-                                    <div><img src={window.trip} alt="trip" className="spot-index-img"/></div>
+                                    <div><img src={spot.image_url} alt="trip" className="spot-index-img"/></div>
                                     <div className="spot-index-info">
                                         <div className="spot-index-name"><Link to={`/spots/${spot.id}`}>{spot.name}</Link></div>
                                         <div>{ spot.spot_type }</div>

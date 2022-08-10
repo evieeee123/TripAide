@@ -137,7 +137,11 @@ san_francisco = City.create!({
     stay_description: "A mix of the charming, iconic, and modern.",
     eat_description: "Quintessential San Francisco restaurants, bars, and beyond.",
     latitude: "37.773972",
-    longtitude: "-122.431297"
+    longtitude: "-122.431297",
+    city_state: "CA",
+    image_url_1: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/c2/87/c8/caption.jpg?w=700&h=-1&s=1",
+    image_url_2: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/c2/88/a5/caption.jpg?w=500&h=300&s=1",
+    image_url_3: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/c2/89/0a/caption.jpg?w=500&h=300&s=1"
 })
 
 # city 2
@@ -149,7 +153,11 @@ san_diego = City.create!({
     stay_description: "A mix of the charming, iconic, and modern.",
     eat_description: "Quintessential San Diego bistros, bars, and beyond.",
     latitude: "32.7809045669252",
-    longtitude: "-117.1638533848686"
+    longtitude: "-117.1638533848686",
+    city_state: "CA",
+    image_url_1: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/c9/62/b2/caption.jpg?w=700&h=-1&s=1&cx=960&cy=640&chk=v1_4980f8958312dde2edce",
+    image_url_2: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/c9/62/95/caption.jpg?w=500&h=300&s=1",
+    image_url_3: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/c9/62/a4/caption.jpg?w=500&h=300&s=1&cx=1190&cy=622&chk=v1_85d63b7a97e30f70ec0a"
 })
 
 # city 3
@@ -161,7 +169,11 @@ guangzhou = City.create!({
     stay_description: "A mix of the charming, modern, and tried and true.",
     eat_description: "Can't-miss spots to dine, drink, and feast.",
     latitude: "23.106404887516206",
-    longtitude: "113.33903940706196"
+    longtitude: "113.33903940706196",
+    city_state: "Canton",
+    image_url_1: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/33/fd/6b/guangzhou.jpg?w=700&h=500&s=1",
+    image_url_2: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/14/e3/24/ac/photo9jpg.jpg?w=500&h=300&s=1",
+    image_url_3: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/6a/df/32/guangdong-museum.jpg?w=500&h=300&s=1"
 })
 
 # city 4
@@ -173,7 +185,11 @@ seattle = City.create!({
     stay_description: "A mix of the charming, modern, and tried and true.",
     eat_description: "Can't-miss spots to dine, drink, and feast.",
     latitude: "47.658749438294386",
-    longtitude: "-122.32421807670838"
+    longtitude: "-122.32421807670838",
+    city_state: "WA",
+    image_url_1: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/c2/6f/23/caption.jpg?w=700&h=-1&s=1",
+    image_url_2: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/c2/70/ef/caption.jpg?w=500&h=300&s=1&cx=1329&cy=3056&chk=v1_3aa926777e8f97450e73",
+    image_url_3: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/c2/71/04/caption.jpg?w=500&h=300&s=1"
 })
 
 
@@ -186,7 +202,11 @@ new_york_city = City.create!({
     stay_description: "A mix of the charming, iconic, and modern.",
     eat_description: "Quintessential New York City restaurants, bars, and beyond.",
     latitude: "40.70131408646531",
-    longtitude: "-73.93439048418783"
+    longtitude: "-73.93439048418783",
+    city_state: "NY",
+    image_url_1: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/c5/7c/68/caption.jpg?w=700&h=500&s=1&cx=950&cy=1766&chk=v1_9ee2771da71f55a7ac6a",
+    image_url_2: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/25/14/2e/b4/caption.jpg?w=500&h=300&s=1",
+    image_url_3: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/25/14/2f/f8/caption.jpg?w=500&h=300&s=1"
 })
 
 
@@ -198,7 +218,8 @@ ferry_building = Spot.create!({
     description: "A city landmark transformed into a gourmet food emporium and farmers market.",
     duration: "1-2 hours",
     longtitude: "-122.39278435986158",
-    latitude: "37.79501921083725"
+    latitude: "37.79501921083725",
+    image_url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/a2/bd/26/ferry-building.jpg?w=400&h=300&s=1"
 })
 
 # attraction 2
@@ -209,7 +230,8 @@ chinatown = Spot.create!({
     description: "This electric neighborhood of 100,000 people is not to be missed, and it's not hard to find: listen for the clack of mahjong tiles and nose out the salty spicy squid.",
     duration: "1-2 hours",
     longtitude: "-122.4077477136368",
-    latitude: "37.79564131465383"
+    latitude: "37.79564131465383",
+    image_url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/c1/dc/5e/chinatown.jpg?w=400&h=-1&s=1"
 })
 
 # attraction 3
@@ -220,7 +242,8 @@ alcatraz_island = Spot.create!({
     description: "Park rangers conduct tours by recounting the prison's thrilling history along with intriguing anecdotes about Al Capone and other legendary figures that made a 'home' here.",
     duration: "2-3 hours",
     longtitude: "-122.42290185750613",
-    latitude: "37.8269859540991"
+    latitude: "37.8269859540991",
+    image_url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/7c/af/88/aerial-shot-of-alcatraz.jpg?w=400&h=300&s=1"
 })
 
 # attraction 4
@@ -231,7 +254,8 @@ uss_museum = Spot.create!({
     description: "Located in downtown San Diego, the USS Midway (Museum) was America's longest-serving aircraft carrier of the 20th century. Today, the interactive museum is an unforgettable adventure for the entire family as guests walk in the footsteps of the 225,000 young men who served on Midway. Visitors explore a floating city at sea, the amazing flight deck and its 29 restored aircraft, flight simulators, and are inspired in the Battle of Midway Theater, included with admission. Admission also includes a self-guided audio tour narrated by Midway sailors in English, Mandarin, Spanish, Japanese, French and German. Visiting Midway is a once-in-a-lifetime experience in San Diego, known around the world as 'Navy Town, USA.'",
     duration: "More than 3 hours",
     longtitude: "-117.17511693458052",
-    latitude: "32.7139406379275"
+    latitude: "32.7139406379275",
+    image_url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/ca/d7/cf/get-up-close.jpg?w=400&h=300&s=1"
 })
 
 # attraction 5
@@ -242,7 +266,8 @@ gliderport = Spot.create!({
     description: "With nearly 100 years of flying history, the Torrey Pines Gliderport is the most historic aviation site in North America, and Southern California’s premiere location for paragliding, hang gliding, remote control models and sailplanes. The Gliderport provides a world class flying site, flight lessons, certifications, tandem flights, equipment sales, and repair services.",
     duration: "2-3 hours",
     longtitude: "-117.25100788272174",
-    latitude: "32.889623732904376"
+    latitude: "32.889623732904376",
+    image_url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/8f/2e/7a/torrey-pines-gliderport.jpg?w=400&h=-1&s=1"
 })
 
 # attraction 6
@@ -253,7 +278,8 @@ balboa_park = Spot.create!({
     description: "One of the most popular urban parks in the United States, this bucolic paradise is packed with an array of attractions, including the world-famous San Diego Zoo.",
     duration: "More than 3 hours",
     longtitude: "-117.14235663025597",
-    latitude: "32.73495166747875"
+    latitude: "32.73495166747875",
+    image_url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/12/df/eb/il-parco-balboa-e-il.jpg?w=400&h=-1&s=1"
 })
 
 # attraction 7
@@ -264,7 +290,8 @@ pier = Spot.create!({
     description: "From amazing views and a sea of sea lions to chowder bread bowls and California wines, your visit to San Francisco starts at PIER 39. Kick off your visit by exploring two levels of dining, entertainment, shopping and attractions, all surrounded by unbeatable views of the city and the bay. Take it from the world famous sea lions: a visit to San Francisco starts at The PIER.",
     duration: "2-3 hours",
     longtitude: "-122.409901554835",
-    latitude: "37.8089718275332"
+    latitude: "37.8089718275332",
+    image_url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/05/b1/fc/12/pier-39.jpg?w=300&h=300&s=1"
 })
 
 # attraction 8
@@ -275,7 +302,8 @@ gaslamp_quarter = Spot.create!({
     description: "A 16-block national historic district that offers visitors a variety of restaurants and shops, as well as an eyeful of Victorian architecture.",
     duration: "More than 3 hours",
     longtitude: "-117.16235236217094",
-    latitude: "32.7133080176587"
+    latitude: "32.7133080176587",
+    image_url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/24/db/b4/from-top-tier-nightclubs.jpg?w=400&h=300&s=1"
 })
 
 # attraction 9
@@ -286,7 +314,8 @@ canton_tower = Spot.create!({
     description: "The Canton Tower stands at the intersection of Guangzhou's new urban central and the Pearl River scenery zone. Right across the river, is the Asian Games Park and Zhu Jiang New Town, together with the Guangzhou Opera House, Library, No.2 Children's Palace and Guangdong Provincial Museum it forms the new metropolitan sky line. The Canton Tower is the tallest TV tower in the world with a total height of 600m. The Tower was built using the latest engineering technologies, but inherits 2000 years of Canton Culture. It displays Guangzhou’s vision and determination to the world. The Tower offers an observation deck with a spectacular view, several top-notch restaurants and catering services, 5-star exhibition, convention and entertainment facilities. All these enable you not just to enjoy the magnificent scenery of Guangzhou, but also to experience the excitement of adventure at great heights.",
     duration: "2-3 hours",
     longtitude: "113.32457889093891",
-    latitude: "23.106415003487413"
+    latitude: "23.106415003487413",
+    image_url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/74/c5/d4/20180624-193935-largejpg.jpg?w=400&h=-1&s=1"
 })
 
 # attraction 10
@@ -297,7 +326,8 @@ shamian_island = Spot.create!({
     description: "This lovely, tree-lined neighborhood bordering the Pearl River was once home to foreign merchants, and today is a laid-back area ideal for strolling or stopping for a meal or cup of tea.",
     duration: "2-3 hours",
     longtitude: "113.24485639002339",
-    latitude: "23.10667914122954"
+    latitude: "23.10667914122954",
+    image_url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/59/0a/af/photo3jpg.jpg?w=400&h=-1&s=1"
 })
 
 # attraction 11
@@ -308,7 +338,8 @@ lychee_bay = Spot.create!({
     description: "Lychee Bay, a set of creeks and lakes that flow southwest to Pearl River, is a tourist attraction in Guangzhou (Canton), Guangdong. Liwan District, where Lychee Bay is located, was named after it. There are many historical relics and historical architectures in Lychee Bay, such as Wenta and Xiguan House. Various cultural activities are held on Lychee Bay, such as the Cantonese opera competition.",
     duration: "2-3 hours",
     longtitude: "113.23736999729631",
-    latitude: "23.11479024985969"
+    latitude: "23.11479024985969",
+    image_url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/eb/f9/20/lychee-bay-park.jpg?w=1200&h=-1&s=1"
 })
 
 # attraction 12
@@ -319,7 +350,8 @@ chimelong = Spot.create!({
     description: "Guangzhou Chimelong Safari Park wild animal world belongs to the first batch of the national, Guangzhou's only national 5A scenic spot tourism resort, located in Panyu, Guangzhou. The park with large populations of wild animal breeding and self driving ornamental features, known as the most China international standard of national wild animal zoo, is the world's population, up to the wild animal theme park. 6 highlights waiting for you to explore: long long wild animal world 4 highlights, the paradise of rare animals, self driving tours of animals, animals, animals to grab the eye, animal science base, leading the industry trend.",
     duration: "More than 3 hours",
     longtitude: "113.31575140027017",
-    latitude: "22.999790745990556"
+    latitude: "22.999790745990556",
+    image_url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/8b/88/8d/20151118-122537-largejpg.jpg?w=400&h=300&s=1"
 })
 
 # attraction 13
@@ -330,7 +362,8 @@ chihuly_garden = Spot.create!({
     description: "Located in the heart of Seattle, Chihuly Garden and Glass provides a look at the inspiration and influences that inform the career of artist Dale Chihuly. Through the exhibition's eight interior galleries, lush outdoor garden and centerpiece Glasshouse visitors will experience a comprehensive look at Chihuly's most significant series of work. With both day and night experiences, and full-service dining in the adjoining Collections Café, this long-term exhibition offers a unique experience rain or shine.",
     duration: "2 hours",
     longtitude: "-122.35044760213177",
-    latitude: "47.62054541591427"
+    latitude: "47.62054541591427",
+    image_url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/87/52/77/this-is-such-a-cool-spot.jpg?w=400&h=300&s=1"
 })
 
 # attraction 14
@@ -341,7 +374,8 @@ pike_place = Spot.create!({
     description: "One of the few authentic farmer's markets in the United States, this hub of delicious scents, delectable eats and delightful personalities attracts nine million visitors a year.",
     duration: "More than 3 hours",
     longtitude: "-122.341549227991",
-    latitude: "47.609734383020665"
+    latitude: "47.609734383020665",
+    image_url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/a7/5c/e3/explore-all-9-acres-of.jpg?w=400&h=300&s=1"
 })
 
 # attraction 15
@@ -352,7 +386,8 @@ sky_view = Spot.create!({
     description: "Private View Packages Now Available! Experience Sky View Observatory exclusively for 1-Hour for yourself and up to 4 people - 5 People total! * Temporarily Closed for General Admission.* Sky View Observatory in downtown Seattle is the ideal first stop on your visit to the Emerald City. Here you can map out your entire Pacific Northwest experience! Sky View is located on the 73rd floor of Columbia Center. At 902 feet, it offers the tallest public viewing area in the Pacific Northwest. The 360-degree panoramic view includes Mt. Rainier, Bellevue, the Cascade Mountains, Mt. Baker, Elliott Bay, the Olympic Mountains, the Space Needle and the city of Seattle.",
     duration: "2-3 hours",
     longtitude: "-122.3304192870853",
-    latitude: "47.60456811107923"
+    latitude: "47.60456811107923",
+    image_url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/89/7d/ba/view.jpg?w=400&h=-1&s=1"
 })
 
 # attraction 16
@@ -363,7 +398,8 @@ metropolitan_museum = Spot.create!({
     description: "At New York City's most visited museum and attraction, you will experience over 5,000 years of art from around the world. The Met is for anyone as a source of inspiration, insight and understanding. You can learn, escape, play, dream, discover, connect.",
     duration: "2-3 hours",
     longtitude: "-73.96321181582695",
-    latitude: "40.779428455136774"
+    latitude: "40.779428455136774",
+    image_url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/24/61/95/89/the-met-fifth-avenue.jpg?w=400&h=-1&s=1"
 })
 
 # attraction 17
@@ -374,7 +410,8 @@ central_park = Spot.create!({
     description: "For more than 150 years, visitors have flocked to Central Park's 843 green acres in the heart of Manhattan. Since 1980, the Park has been managed by the Central Park Conservancy, in partnership with the public. Central Park is open 6 am to 1 am daily. Visit the official website of Central Park to learn more about Park happenings and activities and to learn how you to help Central Park!",
     duration: "More than 3 hours",
     longtitude: "-73.96631070068699",
-    latitude: "40.78100052347072"
+    latitude: "40.78100052347072",
+    image_url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/8b/7c/9f/photo0jpg.jpg?w=400&h=300&s=1"
 })
 
 # attraction 18
@@ -385,7 +422,8 @@ brooklyn_bridge = Spot.create!({
     description: "Opened in 1883, the Brooklyn Bridge provides passage between Brooklyn and Manhattan for motorists, trains, bicycles and pedestrians. One of the primary symbols of New York City, it is a marvel of design and provides spectacular views of the city's skyline.",
     duration: "< 1 hour",
     longtitude: "-73.99691769637778",
-    latitude: "40.70601192488628"
+    latitude: "40.70601192488628",
+    image_url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/90/3d/6f/photo0jpg.jpg?w=400&h=-1&s=1"
 })
 
 
@@ -401,7 +439,8 @@ eight_am = Restaurant.create!({
     phonenum: "+1 415-292-4888",
     res_address: "1323 Columbus Ave, San Francisco, CA 94133-1330",
     longtitude: "-122.41930249024996",
-    latitude: "37.80614400551723"
+    latitude: "37.80614400551723",
+    image_url: "https://media-cdn.tripadvisor.com/media/photo-s/0e/8c/ee/47/photo1jpg.jpg"
 })
 
 # restaurant 2
@@ -416,7 +455,8 @@ kokkari_estiatorio = Restaurant.create!({
     phonenum: "+1 415-981-0983",
     res_address: "200 Jackson St, San Francisco, CA 94111-1806",
     longtitude: "-122.40002412278365",
-    latitude: "37.797066190887264"
+    latitude: "37.797066190887264",
+    image_url: "https://media-cdn.tripadvisor.com/media/photo-s/25/15/20/92/caption.jpg"
 })
 
 # restaurant 3
@@ -431,7 +471,8 @@ coastal_kitchen = Restaurant.create!({
     phonenum: "+1 858-539-8635",
     res_address: "3999 Mission Blvd Waterfront at the Catamaran Resort Hotel and Spa, San Diego, CA 92109-6959",
     longtitude: "-117.25246117130227",
-    latitude: "32.790202988070185"
+    latitude: "32.790202988070185",
+    image_url: "https://media-cdn.tripadvisor.com/media/photo-s/1d/29/d9/8f/oceana-coastal-kitchen.jpg"
 })
 
 # restaurant 4
@@ -446,7 +487,8 @@ parma_cucina_italiana = Restaurant.create!({
     phonenum: "+1 619-543-0049",
     res_address: "3850 5th Ave, San Diego, CA 92103-3141",
     longtitude: "-117.16055514246736",
-    latitude: "32.74769389781319"
+    latitude: "32.74769389781319",
+    image_url: "https://media-cdn.tripadvisor.com/media/photo-s/12/4d/03/aa/dining-room.jpg"
 })
 
 # restaurant 5
@@ -461,7 +503,8 @@ good_mong_kok = Restaurant.create!({
     phonenum: "+1 415-397-2688",
     res_address: "1039 Stockton St, San Francisco, CA 94108-1109",
     longtitude: "-122.4083560024099",
-    latitude: "37.79546345772438"
+    latitude: "37.79546345772438",
+    image_url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/c5/fd/cd/photo0jpg.jpg?w=400&h=300&s=1"
 })
 
 # restaurant 6
@@ -476,7 +519,8 @@ greens = Restaurant.create!({
     phonenum: "+1 415-771-6222",
     res_address: "2 Marina Blvd Building A, San Francisco, CA 94123-1284",
     longtitude: "-122.4321059017464",
-    latitude: "37.8067470667388"
+    latitude: "37.8067470667388",
+    image_url: "https://media-cdn.tripadvisor.com/media/photo-s/0e/fb/9a/7d/greens-restaurant.jpg"
 })
 
 # restaurant 7
@@ -491,7 +535,8 @@ ar = Restaurant.create!({
     phonenum: "+1 858-777-6635",
     res_address: "11480 N Torrey Pines Rd, La Jolla, San Diego, CA 92037-1045",
     longtitude: "-117.24459996203976",
-    latitude: "32.90465492783339"
+    latitude: "32.90465492783339",
+    image_url: "https://media-cdn.tripadvisor.com/media/photo-s/1a/f7/18/bd/chicken-liver-pate.jpg"
 })
 
 # restaurant 8
@@ -506,7 +551,8 @@ nine_ten = Restaurant.create!({
     phonenum: "+1 858-964-5400",
     res_address: "910 Prospect St., La Jolla, San Diego, CA 92037",
     longtitude: "-117.27537310252609",
-    latitude: "32.84722886201589"
+    latitude: "32.84722886201589",
+    image_url: "https://media-cdn.tripadvisor.com/media/photo-s/10/bc/56/cd/nine-ten-restaurant-main.jpg"
 })
 
 # restaurant 9
@@ -521,7 +567,8 @@ dian_dou_de = Restaurant.create!({
     phonenum: "+86 20 8333 2898",
     res_address: "No.470 Huifu East Road, Yuexiu District, Guangzhou China",
     longtitude: "113.26652926846128",
-    latitude: "23.120890117830804"
+    latitude: "23.120890117830804",
+    image_url: "https://media-cdn.tripadvisor.com/media/photo-s/0c/90/13/f2/mmexport1453739508303.jpg"
 })
 
 # restaurant 10
@@ -536,7 +583,8 @@ guangzhou_restaurant = Restaurant.create!({
     phonenum: "+86 20 8138 0388",
     res_address: "No.2 Wenchang South Road, Guangzhou China",
     longtitude: "113.24587726846119",
-    latitude: "23.1137932497135"
+    latitude: "23.1137932497135",
+    image_url: "https://media-cdn.tripadvisor.com/media/daodao/photo-s/04/d2/95/5d/caption.jpg"
 })
 
 # restaurant 11
@@ -551,7 +599,8 @@ mota_restaurant = Restaurant.create!({
     phonenum: "+86 20 8334 2486",
     res_address: "No.451 Huifu E Road, Guangzhou China",
     longtitude: "113.26606170753396",
-    latitude: "23.12087420248179"
+    latitude: "23.12087420248179",
+    image_url: "https://media-cdn.tripadvisor.com/media/photo-s/1a/f5/2d/37/img-20191207-143225-largejpg.jpg"
 })
 
 # restaurant 12
@@ -566,7 +615,8 @@ shun_ji = Restaurant.create!({
     phonenum: "+86 20 8181 4287",
     res_address: "BaoHua Road 85, Guangzhou China",
     longtitude: "113.24172072613132",
-    latitude: "23.11536411742733"
+    latitude: "23.11536411742733",
+    image_url: "https://media-cdn.tripadvisor.com/media/daodao/photo-s/0b/b5/17/a0/photo0jpg.jpg"
 })
 
 # restaurant 13
@@ -581,7 +631,8 @@ vons = Restaurant.create!({
     phonenum: "+1 206-621-8667",
     res_address: "1225 1st Ave, Seattle, WA 98101-2998",
     longtitude: "-122.33846320213212",
-    latitude: "47.606580979187804"
+    latitude: "47.606580979187804",
+    image_url: "https://media-cdn.tripadvisor.com/media/photo-s/0e/d2/f4/35/buttermilk-creamery-blue.jpg"
 })
 
 # restaurant 14
@@ -596,7 +647,8 @@ salty = Restaurant.create!({
     phonenum: "+1 206-937-1600",
     res_address: "1936 Harbor Ave SW, Seattle, WA 98126-2031",
     longtitude: "-122.37636944446277",
-    latitude: "47.586579342851785"
+    latitude: "47.586579342851785",
+    image_url: "https://media-cdn.tripadvisor.com/media/photo-s/1c/e2/45/ad/best-city-view.jpg"
 })
 
 # restaurant 15
@@ -611,7 +663,8 @@ napkin_burger = Restaurant.create!({
     phonenum: "+1 212-757-2277",
     res_address: "630 9th Ave, New York City, NY 10036",
     longtitude: "-73.99123380233245",
-    latitude: "40.75998697933053"
+    latitude: "40.75998697933053",
+    image_url: "https://media-cdn.tripadvisor.com/media/photo-s/1e/37/eb/b2/5-napkin-burger.jpg"
 })
 
 # restaurant 16
@@ -626,7 +679,8 @@ dinosaur = Restaurant.create!({
     phonenum: "+1 212-694-1777",
     res_address: "700 W 125th St, New York City, NY 10027-2314",
     longtitude: "-73.96090667349581",
-    latitude: "40.81803187932442"
+    latitude: "40.81803187932442",
+    image_url: "https://media-cdn.tripadvisor.com/media/photo-s/12/cb/b3/55/dinosaur-bar-b-que.jpg"
 })
 
 
@@ -639,7 +693,8 @@ riu_plaza = Hotel.create!({
     address: "2500 Mason Street, San Francisco, CA 94133-1450",
     phonenum: "US$159",
     longtitude: "-122.41292420240958",
-    latitude: "37.80729607975771"
+    latitude: "37.80729607975771",
+    image_url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/65/60/4a/hotel-riu-plaza-fisherman.jpg?w=1200&h=-1&s=1"
 })
 
 # hotel 2
@@ -650,7 +705,8 @@ argonaut = Hotel.create!({
     address: "495 Jefferson St, San Francisco, CA 94109-1314",
     phonenum: "US$239",
     longtitude: "-122.42034650240954",
-    latitude: "37.80760857975779"
+    latitude: "37.80760857975779",
+    image_url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/85/2d/49/exterior.jpg?w=500&h=400&s=1"
 })
 
 # hotel 3
@@ -661,7 +717,8 @@ abri = Hotel.create!({
     address: "127 Ellis Street, San Francisco, CA 94102-2109",
     phonenum: "US$167",
     longtitude: "-122.40847327357515",
-    latitude: "37.78533645888827"
+    latitude: "37.78533645888827",
+    image_url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/14/fb/4e/f1/hotel-abri.jpg?w=1000&h=-1&s=1"
 })
 
 # hotel 4
@@ -672,7 +729,8 @@ fairmont = Hotel.create!({
     address: "950 Mason St, San Francisco, CA 94108-6000",
     phonenum: "US$325",
     longtitude: "-122.41007084473996",
-    latitude: "37.79239675807691"
+    latitude: "37.79239675807691",
+    image_url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/af/0d/38/fairmont-san-francisco.jpg?w=1100&h=-1&s=1"
 })
 
 # hotel 5
@@ -683,7 +741,8 @@ bahia = Hotel.create!({
     address: "998 West Mission Bay Drive, San Diego, CA 92109",
     phonenum: "US$299",
     longtitude: "-117.24656450252766",
-    latitude: "32.772658365279575"
+    latitude: "32.772658365279575",
+    image_url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/f0/1d/02/bahia-resort-hotel.jpg?w=1200&h=-1&s=1"
 })
 
 # hotel 6
@@ -694,7 +753,8 @@ kings = Hotel.create!({
     address: "1333 Hotel Circle South, San Diego, CA 92108-3408",
     phonenum: "US$158",
     longtitude: "-117.17509380252804",
-    latitude: "32.75857838098226"
+    latitude: "32.75857838098226",
+    image_url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/c9/56/5c/all-non-smoking-rooms.jpg?w=1100&h=-1&s=1"
 })
 
 # hotel 7
@@ -705,7 +765,8 @@ lafayette = Hotel.create!({
     address: "2223 El Cajon Boulevard, San Diego, CA 92104-1103",
     phonenum: "US$219",
     longtitude: "-117.14072200252808",
-    latitude: "32.7548489809834"
+    latitude: "32.7548489809834",
+    image_url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/21/f7/16/e3/the-private-cabana-area.jpg?w=1100&h=-1&s=1"
 })
 
 # hotel 8
@@ -716,7 +777,8 @@ sofitel = Hotel.create!({
     address: "No.988 Guangzhou Avenue Middle, Tianhe District, Guangzhou 510620 China",
     phonenum: "US$99",
     longtitude: "113.31582732613158",
-    latitude: "23.138375521736673"
+    latitude: "23.138375521736673",
+    image_url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/d3/bd/16/exterior-view.jpg?w=1100&h=-1&s=1"
 })
 
 # hotel 9
@@ -727,7 +789,8 @@ four_seasons = Hotel.create!({
     address: "No. 5 Zhujiang West Road, Pearl River New City, Tianhe District, Guangzhou 510623 China",
     phonenum: "US$236",
     longtitude: "113.32342270299937",
-    latitude: "23.11779546352612"
+    latitude: "23.11779546352612",
+    image_url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/ca/92/f7/four-seasons-hotel-guangzhou.jpg?w=1100&h=-1&s=1"
 })
 
 # hotel 10
@@ -738,7 +801,8 @@ westin = Hotel.create!({
     address: "No.681 Fengpu Middle Road, Haizhu District Area C, Canton Fair Complex, Guangzhou",
     phonenum: "US$111",
     longtitude: "113.36362272613087",
-    latitude: "23.095922577775337"
+    latitude: "23.095922577775337",
+    image_url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/de/e2/25/exterior.jpg?w=1100&h=-1&s=1"
 })
 
 # hotel 11
@@ -749,7 +813,8 @@ white_swan = Hotel.create!({
     address: "No.1 Shamian South Street, Guangzhou 510133 China",
     phonenum: "US$117",
     longtitude: "113.24297299729614",
-    latitude: "23.105733116724345"
+    latitude: "23.105733116724345",
+    image_url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/21/5f/d1/a8/exterior-view.jpg?w=600&h=-1&s=1"
 })
 
 # hotel 11
@@ -760,7 +825,8 @@ mediterranean = Hotel.create!({
     address: "425 Queen Anne Avenue North, Seattle, WA 98109-4517",
     phonenum: "US$209",
     longtitude: "-122.35700130213155",
-    latitude: "47.623101347904786"
+    latitude: "47.623101347904786",
+    image_url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/4e/2b/2d/mediterranean-inn.jpg?w=1100&h=-1&s=1"
 })
 
 # hotel 12
@@ -771,7 +837,8 @@ paramount = Hotel.create!({
     address: "724 Pine St, Seattle, WA 98101-1843",
     phonenum: "US$207",
     longtitude: "-122.33362377329688",
-    latitude: "47.61314821386756"
+    latitude: "47.61314821386756",
+    image_url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/e6/0e/1a/view-from-metropolitan.jpg?w=1100&h=-1&s=1"
 })
 
 # hotel 13
@@ -782,7 +849,8 @@ pod_time = Hotel.create!({
     address: "400 W 42nd St, New York City, NY 10036-6809",
     phonenum: "US$123",
     longtitude: "-73.99313877349746",
-    latitude: "40.75842857933068"
+    latitude: "40.75842857933068",
+    image_url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/85/af/04/pod-times-square.jpg?w=1100&h=-1&s=1"
 })
 
 # hotel 14
@@ -793,7 +861,8 @@ edison = Hotel.create!({
     address: "228 West 47th Street, New York City, NY 10036-1401",
     phonenum: "US$127",
     longtitude: "-73.98622040233244",
-    latitude: "40.75964255271943"
+    latitude: "40.75964255271943",
+    image_url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1d/93/ac/12/hotel-edison.jpg?w=1100&h=-1&s=1"
 })
 
 # review 1

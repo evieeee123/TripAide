@@ -19,6 +19,7 @@ class Hotel extends React.Component {
 
     componentDidMount() {
         this.props.fetchHotel(this.props.match.params.hotelId)
+        window.scrollTo(0, 0)
     }
 
     componentWillUnmount() {
@@ -44,7 +45,7 @@ class Hotel extends React.Component {
                     <span>{hotel.address}</span>
                 </ul>
 
-                <img src={window.trip} alt="hotel" className="hotel-show-img"/>
+                <img src={hotel.image_url} alt="hotel" className="hotel-show-img"/>
 
 
                 

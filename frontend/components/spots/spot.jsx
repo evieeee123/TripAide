@@ -14,6 +14,7 @@ class Spot extends React.Component {
         // if clearreview in componentdidmount, it will clear all things when user go into spot show page
         // this.props.clearReviews()
         // this.props.fetchReview(this.props.match.params.reviewId)
+        window.scrollTo(0, 0)
     }
 
     componentWillUnmount() {
@@ -51,7 +52,7 @@ class Spot extends React.Component {
                         <h3>Suggested duration</h3>
                         <div className="spot-about-dt">{spot.duration}</div>
                     </div>
-                    <img src={window.trip} alt="trip" className="spot-show-img" />
+                    <img src={spot.image_url} alt="trip" className="spot-show-img" />
                 </div>
 
                 <div>

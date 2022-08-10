@@ -20,7 +20,9 @@ class ProfileDropdown extends React.Component {
             <div className="nav-login-state">
 
                 <div className='review-button'>
-                    <span className="material-symbols-outlined">edit</span><p> Review</p>
+                    <span className="material-symbols-outlined">edit</span>
+                    <p> Review</p>
+                    <div className='review-button-hover'>Please go to the specific place page to leave your review.</div>
                 </div>
 
                 <div className="dropdown">

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_07_18_170019) do
+ActiveRecord::Schema.define(version: 2022_08_10_220231) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,6 +47,10 @@ ActiveRecord::Schema.define(version: 2022_07_18_170019) do
     t.datetime "updated_at", null: false
     t.float "latitude"
     t.float "longtitude"
+    t.string "image_url_1"
+    t.string "image_url_2"
+    t.string "image_url_3"
+    t.string "city_state"
     t.index ["name"], name: "index_cities_on_name", unique: true
   end
 
@@ -60,6 +64,7 @@ ActiveRecord::Schema.define(version: 2022_07_18_170019) do
     t.float "latitude", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "image_url"
     t.index ["city_id"], name: "index_hotels_on_city_id"
     t.index ["name"], name: "index_hotels_on_name", unique: true
   end
@@ -78,6 +83,7 @@ ActiveRecord::Schema.define(version: 2022_07_18_170019) do
     t.float "latitude", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "image_url"
     t.index ["name"], name: "index_restaurants_on_name", unique: true
   end
 
@@ -105,6 +111,7 @@ ActiveRecord::Schema.define(version: 2022_07_18_170019) do
     t.float "latitude", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "image_url"
     t.index ["city_id"], name: "index_spots_on_city_id"
     t.index ["name"], name: "index_spots_on_name", unique: true
   end

@@ -40,7 +40,8 @@ class CreateReviewForm extends React.Component {
             this.props.fetchRestaurant(this.props.match.params.placeId);
         }
         this.props.fetchReview(this.props.match.params.reviewId)
-            .then((e) => this.prefillState())
+            .then((e) => this.prefillState());
+        window.scrollTo(0, 0)
     };
 
     componentDidUpdate(prevProps) {

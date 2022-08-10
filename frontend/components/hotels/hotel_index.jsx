@@ -14,6 +14,7 @@ class HotelIndex extends React.Component {
     componentDidMount() {
         this.props.fetchHotels(this.props.match.params.cityId)
         this.props.fetchCity(this.props.match.params.cityId)
+        window.scrollTo(0, 0)
         // this.props.fetchReview(this.props.match.params.cityId)
     }
 
@@ -27,9 +28,9 @@ class HotelIndex extends React.Component {
     }
     
     render() {
-        const { hotels, city, reviews } = this.props;
-        if (hotels.length === 0 || !city || !reviews) return null;
-        console.log("this.props", this.props.reviews)
+        const { hotels, city} = this.props;
+        if (hotels.length === 0 || !city) return null;
+        // console.log("this.props", this.props.reviews)
 
         // debugger
         return (
@@ -44,7 +45,7 @@ class HotelIndex extends React.Component {
                             hotels.map(hotel =>
 
                                 <div key={hotel.id} className="single-spot">
-                                    <div><img src={window.trip} alt="trip" className="spot-index-img" /></div>
+                                    <div><img src={hotel.image_url} alt="trip" className="spot-index-img" /></div>
                                     <div className="spot-index-info">
                                         <div className="spot-index-name"><Link to={`/hotels/${hotel.id}`}>{hotel.name}</Link></div>
                                         <div>
@@ -69,6 +70,7 @@ class HotelIndex extends React.Component {
                     </ul>
                 </div>
             </div>
+
         )
     }
 

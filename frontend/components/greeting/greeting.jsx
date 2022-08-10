@@ -40,9 +40,11 @@ class Greeting extends React.Component{
                 </div>
         ) : (
                 <div className='nav-session-button'>
-                    <div className='review-button'><span class="material-symbols-outlined">
-                        edit 
-                    </span><p> Review</p></div>
+                    <div className='review-button'>
+                        <span className="material-symbols-outlined">edit</span>
+                        <p> Review</p>
+                        <div className='review-button-hover'>Please go to the specific place page to leave your review.</div>
+                    </div>
                     <button className='nav-session-button-single'><Link to='/signup' >Sign Up</Link></button>
                     <button className='nav-session-button-single'><Link to='/login'>Login</Link></button>
                 </div>
