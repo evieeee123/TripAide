@@ -72,7 +72,7 @@ class City extends React.Component {
                                 }
                             </ul>
                         </div>
-                            <div className="spot-right-arrow"><img src={window.right_arrow} alt="arrow" className="right-icon" /></div>
+                        <div className="spot-right-arrow"><img src={window.right_arrow} alt="arrow" className="right-icon" /></div>
                     </div>
 
                     <div className="do-part">

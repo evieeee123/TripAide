@@ -43,15 +43,18 @@ class SpotIndex extends React.Component {
                                     <div><img src={spot.image_url} alt="trip" className="spot-index-img"/></div>
                                     <div className="spot-index-info">
                                         <div className="spot-index-name"><Link to={`/spots/${spot.id}`}>{spot.name}</Link></div>
-                                        <div>{ spot.spot_type }</div>
-                                        <div><Rating rate={spot.rating} /></div>
+                                        <div className="spot-index-rating"><Rating rate={spot.rating} /></div>
+                                        <div className="spot-index-type">{ spot.spot_type }</div>
                                     {
                                         (spot.review[0]) ?
-                                            <div><Link to={`/spots/${spot.id}`}> "{this.truncate(spot.review[0], 12)} ..." </Link></div> : ""
+                                        <div className="index-review-1">
+                                            <div className="line" ></div>
+                                            <Link to={`/spots/${spot.id}`} className="index-review-text"> "{this.truncate(spot.review[0], 10)} ..." </Link>
+                                        </div> : ""
                                     }
                                     {
                                         (spot.review[1]) ?
-                                            <div><Link to={`/spots/${spot.id}`}> "{this.truncate(spot.review[1], 12)} ..." </Link> </div> : ""
+                                            <div><Link to={`/spots/${spot.id}`} className="index-review-text" > "{this.truncate(spot.review[1], 10)} ..." </Link> </div> : ""
                                     }
                                     </div>
 

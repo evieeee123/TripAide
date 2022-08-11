@@ -44,18 +44,21 @@ class RestaurantIndex extends React.Component {
                                     <div className="spot-index-info">
                                         <div className="spot-index-name"><Link to={`/restaurants/${restaurant.id}`}>{restaurant.name}</Link></div>
                                         <div>
-                                            <li>{restaurant.cuisines}</li>
-                                            <li>{restaurant.price_range}</li>
-                                            <li><Rating rate={restaurant.rating} /></li>
+                                            <li className="spot-index-rating"><Rating rate={restaurant.rating} /></li>
+                                            <li className="res-index-type"><span>{restaurant.cuisines}</span> | <span>{restaurant.price_range}</span></li>
+                                            {/* <li className="spot-index-type">{restaurant.price_range}</li> */}
                                         </div>
 
                                         {
                                             (restaurant.review[0]) ?
-                                                <div><Link to={`/restaurants/${restaurant.id}`}> "{this.truncate(restaurant.review[0], 12)} ..." </Link></div> : ""
+                                                <div className="index-review-1" >
+                                                    <div className="line" ></div>
+                                                    <Link to={`/restaurants/${restaurant.id}`} className="index-review-text"> "{this.truncate(restaurant.review[0], 12)} ..." </Link>
+                                                </div> : ""
                                         }
                                         {
                                             (restaurant.review[1]) ?
-                                                <div><Link to={`/restaurants/${restaurant.id}`}> "{this.truncate(restaurant.review[1], 12)} ..." </Link> </div> : ""
+                                                <div><Link to={`/restaurants/${restaurant.id}`} className="index-review-text" > "{this.truncate(restaurant.review[1], 12)} ..." </Link> </div> : ""
                                         }
 
                                     </div>

@@ -49,17 +49,20 @@ class HotelIndex extends React.Component {
                                     <div className="spot-index-info">
                                         <div className="spot-index-name"><Link to={`/hotels/${hotel.id}`}>{hotel.name}</Link></div>
                                         <div>
-                                            <li>{hotel.phonenum}</li>
-                                            <li><Rating rate={hotel.rating} /></li>
+                                            <li className="spot-index-rating"><Rating rate={hotel.rating} /></li>
+                                            <li className="spot-index-type">from {hotel.phonenum}/night</li>
                                         </div>
                                         
                                         {
                                             (hotel.review[0]) ?
-                                                <div><Link to={`/hotels/${hotel.id}`}> "{this.truncate(hotel.review[0], 12)} ..." </Link></div> : ""
+                                                <div className="index-review-1">
+                                                    <div className="line" ></div>
+                                                    <Link to={`/hotels/${hotel.id}`} className="index-review-text"> "{this.truncate(hotel.review[0], 12)} ..." </Link>
+                                                </div> : ""
                                         }
                                         {
                                             (hotel.review[1]) ?
-                                                <div><Link to={`/hotels/${hotel.id}`}> "{this.truncate(hotel.review[1], 12)} ..." </Link> </div> : ""
+                                                <div><Link to={`/hotels/${hotel.id}`} className="index-review-text" > "{this.truncate(hotel.review[1], 12)} ..." </Link> </div> : ""
                                         }
                                         
                                     </div>

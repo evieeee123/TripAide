@@ -38,30 +38,74 @@
 }
 
 .single-spot{
-    border: 1px lightgrey solid;
+    border: 1px #e0e0e0 solid;
     display: flex;
     flex-direction: row;
     height: 212px;
     margin-bottom: 20px;
     background-color: white;
     margin-right: 50px;
+    border-radius: 5px;
 }
 
 .spot-index-img{
     width: 267px;
     height: 100%;
+    border-radius: 5px 0 0 5px;
+}
+
+.spot-index-name{
+    margin-bottom: 10px;
 }
 
 .spot-index-name a{
-    font-size: 20px;
-    font-weight: bolder;
+    font-size: 22px;
     font-weight: bolder;
     text-decoration: none;
     color: black;
 }
 
+.spot-index-name a:hover{
+    text-decoration: underline;
+}
+
+.spot-index-type{
+    margin-bottom: 15px;
+}
+
+.res-index-type{
+    margin-bottom: 5px;
+}
+
+.spot-index-rating{
+    margin-bottom: 10px;
+}
+
+.line{
+    margin-bottom: 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.index-review-1{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
+    margin-top: 15px;
+}
+
+.index-review-text{
+    color: #333;
+    text-decoration: none;
+    font-size: calc(800vw / 750);
+}
+
+.index-review-text:hover{
+    text-decoration: underline;
+}
+
 .spot-index-info{
     padding: 20px;
+    min-width: 214px;
 }
 
 
