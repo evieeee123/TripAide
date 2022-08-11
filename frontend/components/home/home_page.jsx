@@ -57,7 +57,7 @@ class HomePage extends React.Component {
                                 </div>
                             )
                         }
-                        <div className="right-arrow"><img src={window.right_arrow} alt="arrow" className="right-icon" /></div>
+                        {/* <div className="right-arrow"><img src={window.right_arrow} alt="arrow" className="right-icon" /></div> */}
                     </ul>
                 </div>
 

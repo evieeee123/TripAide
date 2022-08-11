@@ -45,6 +45,7 @@ class Search extends React.Component{
     // }
 
     render(){
+        let searchResult = [];
         const {spots, hotels, restaurants, cities} = this.props;
         if (!spots || !hotels || !restaurants || !cities) return null;
 
@@ -77,6 +78,7 @@ class Search extends React.Component{
                                 {
                                     cities.map(city => {
                                         if (city.name.toLowerCase().startsWith(this.state.search.toLowerCase())) {
+                                            searchResult.push(city.name)
                                             return (
                                                 <div key={city.id} className="each-place-search">
                                                     <li onClick={() => this.goCity(city.id)}>
@@ -91,10 +93,12 @@ class Search extends React.Component{
                                         }
                                     })
                                 }
+                              
                         {/* //spot */}
                                 {
                                     spots.map(spot => {
                                         if (spot.name.toLowerCase().startsWith(this.state.search.toLowerCase())) {
+                                            searchResult.push(spot.name)
                                             return (
                                                 <div key={spot.id} className="each-place-search">
                                                     <li onClick={() => this.goSpot(spot.id)}>
@@ -114,6 +118,7 @@ class Search extends React.Component{
                                 {
                                     restaurants.map(restaurant => {
                                         if (restaurant.name.toLowerCase().startsWith(this.state.search.toLowerCase())) {
+                                            searchResult.push(restaurant.name)
                                             return (
                                                 <div key={restaurant.id} className="each-place-search">
                                                     <li onClick={() => this.goRestaurant(restaurant.id)}>
@@ -133,6 +138,7 @@ class Search extends React.Component{
                                 {
                                     hotels.map(hotel => {
                                         if (hotel.name.toLowerCase().startsWith(this.state.search.toLowerCase())) {
+                                            searchResult.push(hotel.name)
                                             return (
                                                 <div key={hotel.id} className="each-place-search">
                                                     <li onClick={() => this.goHotel(hotel.id)}>
@@ -148,6 +154,10 @@ class Search extends React.Component{
                                         }
                                     })
                                 }
+
+                                {(searchResult.length === 0) ? 
+                                    <div className="search-error">Sorry, we couldn't find "{this.state.search}" </div> 
+                                : <div></div>}
 
                             </div>
                     </div>

@@ -5,12 +5,6 @@
 
 // form
 
-// .form-rating{
-//     width: 160px;
-//     height: 32px;
-//     display: flex;
-//     flex-direction: row;
-// }
 .create-review-page{
     padding: 70px 140px 30px;
 }
@@ -289,6 +283,9 @@ input[type=date]{
     margin-right: 5px;
     font-size: 16px;
 }
+.whole-review-date{
+    margin-top: 15px;
+}
 
 .review-dropdown {
     position: relative;
@@ -352,4 +349,8 @@ input[type=date]{
 
 .review-dropdown-link:hover {
     background-color: rgb(243, 242, 242);
+}
+
+.show-review-rate{
+    margin-bottom: 10px;
 }

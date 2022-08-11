@@ -4,11 +4,127 @@
 
 .restaurant-show-page {
     margin-top: 60px;
-    padding: 70px 140px 30px;
+    // padding: 70px 140px 30px;
 }
 
-.hotel-pic{
-    margin-top: 30px;
-    max-width: 900px;
-    max-height: 500px;
+.res-info-nav{
+    padding: 55px 140px 30px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.res-pic{
+    max-width: 550px;
+    max-height: 416px;
+    margin-right: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.res-show-rating{
+    display: flex;
+    flex-direction: row;
+}
+
+.split{
+    color: #e0e0e0;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.res-show-price{
+    color: #333;
+}
+
+.res-show-rating span{
+    margin-left: 5px;
+    font-weight: bolder;
+}
+
+.addr-phone{
+    margin-top: 8px;
+    display: flex;
+    flex-direction: row;
+}
+
+.res-show-addr{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.res-show-phone{
+    padding-left: 10px;
+    border-left: #e0e0e0 2px solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.phone-icon{
+    margin-right: 3px;
+}
+
+.res-show-main{
+    padding: 30px 140px 30px;
+    background-color: #f2f2f2;
+}
+
+.img-info-part{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+}
+
+.detial-info{
+    border: #e0e0e0 1px solid;
+    padding: 24px;
+    background-color: white;
+    max-height: 416px;
+}
+
+.detial-info h2{
+    padding: 0 0 14px;
+    font-size: 24px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.res-about{
+    padding: 12px;
+    max-width: 250px;
+}
+
+.res-info-box{
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 1;
+    margin-top: 10px;
+}
+
+.res-box-right{
+    padding: 12px;
+    border-left: 1px solid #e0e0e0;
+}
+
+.res-info-box h4{
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.res-info-box p{
+    font-size: 15px;
+    padding-top: 12px;
+}
+
+.res-box-right div{
+    padding-bottom: 30px;
+}
+
+.show-more-less{
+    width: 250px;
+    max-height: 416px;
+}
+
+.show-more-less br{
+    display: none;
 }

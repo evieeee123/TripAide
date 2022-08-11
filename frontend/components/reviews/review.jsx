@@ -60,7 +60,7 @@ class Review extends React.Component {
                                     <div className="r-bar">
                                         <div className="review-title-bar">
                                             <div>
-                                                <div><Rating rate={review.rating}/></div>
+                                                <div className="show-review-rate"><Rating rate={review.rating}/></div>
                                                 <p className="single-review-title">{review.title}</p>
                                             </div>
 
@@ -80,7 +80,7 @@ class Review extends React.Component {
 
                                         <div>
                                             <p className="review-description">{review.body}</p>
-                                            <p><span className="review-date">Date of visit: </span>{review.visit_date}</p>
+                                            <p className="whole-review-date"><span className="review-date">Date of visit: </span>{review.visit_date}</p>
                                         </div>
                                     </div>
 
