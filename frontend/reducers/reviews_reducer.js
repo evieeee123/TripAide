@@ -5,7 +5,7 @@ import { RECEIVE_HOTEL } from "../actions/hotel_actions";
 
 const reviewReducer = (state = {}, action) => {
     Object.freeze(state);
-    // console.log("action", action.reviewId)
+
     let nextState = Object.assign({}, state);
 
     switch (action.type) {

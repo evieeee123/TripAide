@@ -31,7 +31,6 @@ class Map extends React.Component{
         
         this.MarkerManager = new MarkerManager(this.map);
         this.MarkerManager.updateMarkers(this.props.spots);
-        // console.log(this.MarkerManager.markers)
 
     }
     
@@ -41,7 +40,6 @@ class Map extends React.Component{
         this.props.clearSpots();
         this.props.clearRestaurants();
         this.props.clearHotels();
-        // console.log(this.props)
     }
         
     render(){

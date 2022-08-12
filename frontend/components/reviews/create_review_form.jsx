@@ -31,7 +31,6 @@ class CreateReviewForm extends React.Component {
             // visit_date: new Date().toLocaleDateString()
         };
         this.handleSubmit = this.handleSubmit.bind(this)
-        // console.log(this.props)
     }
 
     componentDidMount() {
@@ -52,8 +51,7 @@ class CreateReviewForm extends React.Component {
         e.preventDefault();
         this.props.createReview(this.state)
             .then(() => this.props.history.push(`/${this.props.placeType}/${this.props.placeId}`))
-        // debugger
-        // console.log(this.props.placeType)
+
     }
 
     update(field) {

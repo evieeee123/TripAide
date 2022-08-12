@@ -30,9 +30,7 @@ class HotelIndex extends React.Component {
     render() {
         const { hotels, city} = this.props;
         if (hotels.length === 0 || !city) return null;
-        // console.log("this.props", this.props.reviews)
 
-        // debugger
         return (
             <div className="spot-index-page">
                 <div className="spots-index-title">Hotels in {city.name}</div>
