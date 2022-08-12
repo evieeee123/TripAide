@@ -9,8 +9,18 @@
     <link rel="icon" type="image/png" sizes="16x16" href='<%= image_url('favicon_io/favicon16x16.png')%>'>
     <%# <link rel="manifest" href="/site.webmanifest"> %>
 
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+
+    <meta property="og:title" content="TripAide" />
+     <meta property='og:image' content="<%= image_url('showpage.gif') %>"/>
+     <meta property="og:description"
+       content="A full-stack single-page clone of TripAdvisor where users can search for different cities' attractions, hotels and restaurants, and allow users to write, update and delete their reviews."
+     />
+     <meta property="og:url"
+       content="https://tripaide.herokuapp.com/"
+     />
 
     <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{ENV['MAPS_API_KEY']}" %>
     <%= stylesheet_link_tag    'application', media: 'all' %>
