@@ -33,18 +33,31 @@ class Review extends React.Component {
         }
     }
 
-
+    
+    
     render(){
-
         const {reviews, spot, places} = this.props;
-        // if (reviews.length === 0) return null;
+        let reviewId = [];
+        for(let i = 0; i < reviews.length; i++){
+            reviewId.push(reviews[i].user_id)
+        }
 
+        // if (reviews.length === 0) return null;
+// debugger
         return (
             <div className="review-box">
                 <div className="inner-review-box">
                     <div className="review-header">
                         <div className="review-header-title">Review<span>({reviews.length})</span></div>
-                        <button className="review-header-button"><Link to={this.handleUserState}>Write review</Link></button>
+                        {
+                            (this.props.currentUser && reviewId.includes(this.props.currentUser.id)) ?
+                                <div className="had-review-box">
+                                    <button className="had-review-button">Write a review</button> 
+                                    <div className="had-review-button-hover">You've already submitted a review of this place</div>
+                                </div>
+                                :
+                                <button className="review-header-button"><Link to={this.handleUserState}>Write a review</Link></button>
+                        }
                     </div>
 
                     <div>
