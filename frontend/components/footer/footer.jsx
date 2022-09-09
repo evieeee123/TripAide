@@ -34,7 +34,7 @@ class Footer extends React.Component{
                     <div className="footer-project">
                         <span>Other Projects: </span>
                         <span><a href="https://evieeee123.github.io/catch_jerry" target="_blank" rel="noopener noreferrer">Catch Jerry</a></span>
-                        <span><a href="https://meal-in.herokuapp.com/#/" target="_blank" rel="noopener noreferrer">Meal'in</a></span>
+                        <span><a href="https://meal-in.herokuapp.com" target="_blank" rel="noopener noreferrer">Meal'in</a></span>
                     </div>
                     <div className="footer-social-icon">
                         <span><a href="https://www.linkedin.com/in/evie-zeng-863a3622a/" target="_blank" rel="noopener noreferrer"><IoLogoLinkedin className="footer-linkedin" /></a></span>
